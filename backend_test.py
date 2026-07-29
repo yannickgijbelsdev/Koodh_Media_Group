@@ -11,7 +11,7 @@ from pymongo import MongoClient
 import os
 
 # Backend URL from frontend/.env
-BACKEND_URL = "https://consultant-web-1.preview.emergentagent.com/api"
+BACKEND_URL = "https://koodh-digital.preview.emergentagent.com/api"
 
 def print_section(title):
     """Print a formatted section header"""

@@ -4,87 +4,51 @@ import Reveal from "./Reveal";
 
 const faqs = [
   {
-    q: "Who are Koodh's services for?",
+    q: "What does Koodh Media Group do?",
     intro:
-      "Koodh provides IT and development services for both individuals and businesses. Whether you need help with your personal computer, network, Microsoft 365 environment or smart home technology, or you're a company looking for a reliable IT partner for consultancy, web development or cloud solutions, we're here to help.",
+      "We create audio branding for radio \u2014 sweepers, jingles, radio beds and imaging \u2014 and we shoot event and concert photography. In short: we make your station sound unmistakable and your event look unforgettable.",
   },
   {
-    q: "What services does Koodh offer?",
-    intro: "Our services include:",
+    q: "What kind of audio do you produce?",
+    intro: "Our audio work includes:",
     list: [
-      "IT Consultancy",
-      "Website Design & Development",
-      "AI Solutions & Business Automation",
-      "Microsoft 365 Implementation & Management",
-      "Cloud Infrastructure",
-      "Network Design & Security",
-      "Technical Support",
-      "Hosting & Maintenance",
-      "Digital Transformation Consulting",
+      "Radio imaging & sweepers",
+      "Custom jingles (sung or instrumental)",
+      "Radio beds & music beds",
+      "Sound IDs & full branding packages",
+      "Promo & commercial production",
+      "Voice-over direction and mixing",
     ],
   },
   {
-    q: "Do you work with private customers?",
+    q: "What kind of photography do you offer?",
     intro:
-      "Yes. While many of our clients are businesses, we also support private customers with a wide range of IT services. This includes computer support, Wi-Fi troubleshooting, Microsoft 365 setup, cloud storage, backups, cybersecurity, hardware installation and setup.",
+      "Live event, festival and concert photography. We capture the artists on stage and the energy of the crowd, and deliver edited images fast so you can share them while the moment is still hot. Recent work includes Genk On Stage and Zomernoten.",
   },
   {
-    q: "Do you work with businesses?",
+    q: "Who do you work with?",
     intro:
-      "Absolutely. We support startups and SMEs with everything from day-to-day IT support to digital transformation. Whether you need consultancy, infrastructure management, a custom web application or an AI-powered solution, we provide tailored solutions designed around your business.",
+      "We work with radio stations, festivals, event organisers and brands \u2014 from local stations looking for a fresh sound to festivals that need their weekend captured. Partners include radio group GRK and events such as Genk On Stage and Zomernoten.",
   },
   {
-    q: "Where are your websites and data hosted?",
+    q: "Where are you based and where do you work?",
     intro:
-      "We take data location and privacy seriously. Your websites are hosted in secure datacenters in the Netherlands and Belgium. All Microsoft services and data are hosted within the European Union, in line with EU privacy and data-protection standards. Our Xink e-mail signatures are hosted on Microsoft Azure, also within the EU.",
+      "We\u2019re based in Budel-Schoot (Noord-Brabant, NL) and Pelt (Limburg, BE) and work across Limburg, Brabant and the whole of the Netherlands and Belgium. For events we travel to wherever the stage is.",
   },
   {
-    q: "Do you use Artificial Intelligence (AI)?",
+    q: "How fast do you deliver?",
     intro:
-      "Yes. Artificial Intelligence is an important part of how we develop modern digital solutions. We integrate AI where it creates real value, helping businesses improve efficiency, automate repetitive tasks and unlock new opportunities. Examples include:",
-    list: [
-      "AI-powered business applications",
-      "Intelligent automation workflows",
-      "AI chatbots and virtual assistants",
-      "Document and content processing",
-      "Data analysis and reporting",
-      "AI integrations within websites and web applications",
-    ],
-    outro:
-      "Every AI implementation is tailored to the client's specific needs and integrated seamlessly into existing workflows whenever possible.",
+      "Audio productions are delivered on agreed deadlines \u2014 radio moves fast and so do we. For event photography we deliver edited highlights quickly, usually within a day, so you can post while the buzz is still fresh.",
   },
   {
-    q: "Do you use AI during development?",
+    q: "How much does it cost?",
     intro:
-      "Yes. Our development process is enhanced by modern AI tools that help us streamline repetitive tasks, improve code quality and accelerate development without compromising reliability.",
-    outro:
-      "AI supports our developers throughout the process, but every solution is carefully reviewed, tested and refined by experienced professionals before delivery. This ensures high-quality, secure and reliable solutions.",
+      "It depends on the scope \u2014 a single sweeper is very different from a full imaging pack or a weekend of festival photography. We always send a clear, no-obligation quote up front so you know exactly what to expect, with no surprises.",
   },
   {
-    q: "What are your payment terms?",
+    q: "How do we get started?",
     intro:
-      "Payment terms depend on the type and scope of each project and are always agreed upon before work begins. Our standard payment terms are:",
-    list: [
-      "IT Consultancy: Payment due within 15 days of the invoice date.",
-      "Web Development: Payment due within 30 days of the invoice date.",
-    ],
-    outro:
-      "For larger projects, milestone-based payments or upfront deposits may apply. These arrangements are clearly outlined in the quotation or project agreement.",
-  },
-  {
-    q: "Do you provide quotations before starting a project?",
-    intro:
-      "Yes. Every project starts with a clear proposal outlining the scope of work, estimated timeline, pricing and any additional costs. This ensures transparency and helps avoid unexpected surprises.",
-  },
-  {
-    q: "Do you offer maintenance and support?",
-    intro:
-      "Yes. We offer ongoing maintenance, security updates, hosting, monitoring and technical support after your project has been completed. This keeps your website, application or IT infrastructure secure, reliable and up to date.",
-  },
-  {
-    q: "How can I start a project with Koodh?",
-    intro:
-      "Getting started is easy. Simply send us an email and we'll schedule an introductory conversation to discuss your goals, explore possible solutions and provide a tailored quotation without obligation.",
+      "Easy \u2014 send us an e-mail at yannick.gijbels@koodhmediagroup.com with your station, event or idea. We\u2019ll get back to you with honest advice and a tailored quote.",
   },
 ];
 

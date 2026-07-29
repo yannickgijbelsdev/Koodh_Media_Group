@@ -32,3 +32,14 @@ Pixel-perfect clone of a branding website, fully rebranded to "Koodh". Dynamic p
 ## Backlog / notes
 - Orphaned SMTP config in backend `.env`/`server.py` (harmless, contact form removed).
 - Footer has no service links yet (nav covers it); could add for SEO/discoverability.
+- Home & Work page BODY content is still the old IT/branding copy — user will rewrite these later (only logo was swapped, per request 2026-06).
+
+## 2026-06 — Rebrand to Koodh Media Group
+Rebranded the whole site from the IT company "Koodh" to **Koodh Media Group** (audiovormgeving voor radio: sweepers, jingles, radio beds, imaging + eventfotografie). Source: koodhmediagroup.com. Language of on-page content kept English (matches existing site & koodhmediagroup.com UI). Contact: **yannick.gijbels@koodhmediagroup.com**. Locations Budel-Schoot (NL) & Pelt (BE). Team = only **Yannick Gijbels**.
+- **Logo**: downloaded from koodhmediagroup.com → `src/assets/koodhmg-logo.png` (trimmed). Wired into `Header.jsx`, `Footer.jsx` and `api.js` (Work card icon). Inverts to white on the dark home hero.
+- **Nav restructure** (`mock.js`): WORK, ABOUT, MEET US, **PHOTOGRAPHY**, **AUDIO**, FAQ, CONTACT. Removed Website Development / Microsoft 365 / IT Consultancy.
+- **New pages**: `Photography.jsx` (/photography) with real Genk On Stage / Zomernoten festival photos hosted locally in `src/assets/photography/`; `Audio.jsx` (/audio) with locally-hosted generated radio-studio + sound-design imagery in `src/assets/audio/`. Deleted `WebsiteDevelopment.jsx`, `Microsoft365.jsx`, `ItConsultancy.jsx`. `App.js` routes updated.
+- **Rewritten content**: About (2 services: Photography + Audio, team teaser = Yannick), MeetUs (only Yannick), Contact (single email channel), FaqSection (media FAQs), Terms + Privacy (brand + email), `mock.js` koodhIntro/koodhValues/koodhStats, `seo.js` base title + koodhmediagroup.com canonical, `index.html` meta + JSON-LD, `sitemap.xml` + `robots.txt` (new domain + all routes incl. photography/audio/meet-us/faq).
+- **Untouched per request**: Home & Work page body content (logo only).
+- Verified via screenshots: home (white logo on dark hero), work, about, photography, audio all render correctly; layout preserved.
+

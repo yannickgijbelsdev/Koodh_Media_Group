@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://koodh.com/sitemap.xml
+Sitemap: https://koodhmediagroup.com/sitemap.xml

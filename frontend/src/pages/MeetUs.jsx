@@ -5,26 +5,16 @@ import CookieBanner from "../components/CookieBanner";
 import PageHero from "../components/PageHero";
 import CtaBand from "../components/CtaBand";
 import Reveal from "../components/Reveal";
-import BrandStrip from "../components/BrandStrip";
 import usePageMeta from "../lib/seo";
 import { koodhValues } from "../mock";
 import yannickImg from "../assets/yannick-gijbels.png";
-import chielImg from "../assets/chiel-van-gansewinkel.png";
 
 const team = [
   {
-    name: "Chiel van Gansewinkel",
-    role: "IT Consultancy, Microsoft 365 Cloud & AI Specialist",
-    photo: chielImg,
-    bio: "Chiel is the person you want on-site when the Wi-Fi drops or a computer plays up. Hands-on, calm and practical, he keeps your day-to-day tech running \u2014 and as an AI specialist he builds smart workflows that take care of everyday, repetitive tasks so you don\u2019t have to.",
-    brands: ["microsoft", "proxmox", "unraid", "unifi", "tplink", "omada", "openai"],
-  },
-  {
     name: "Yannick Gijbels",
-    role: "Web Development, AI Specialist, Microsoft 365 Cloud & Xink E-mail Signatures",
+    role: "Founder \u2014 Audio Branding & Event Photography",
     photo: yannickImg,
-    bio: "Yannick builds fast, modern websites and web apps, and as an AI specialist in development he weaves smart AI right into the code. He also makes your business look sharp online \u2014 from Microsoft 365 setups to polished Xink e-mail signatures.",
-    brands: ["microsoft", "xink", "google", "cloudflare", "claude", "openai"],
+    bio: "Yannick is the person behind the mic and the lens. He produces radio imaging, sweepers and jingles that give stations their signature sound, and shoots the festivals and concerts where the energy is real. Hands-on, fast and always on brand \u2014 from the first idea to the final master.",
   },
 ];
 
@@ -32,7 +22,7 @@ export default function MeetUs() {
   usePageMeta({
     title: "Meet Us",
     description:
-      "Meet the real Kootahs \u2014 the small, dedicated team behind Koodh building websites, AI and IT solutions across the Netherlands and Belgium.",
+      "Meet Yannick Gijbels, founder of Koodh Media Group \u2014 creating audio branding for radio and shooting live event photography across the Netherlands and Belgium.",
     path: "/meet-us",
   });
 
@@ -44,18 +34,18 @@ export default function MeetUs() {
           eyebrow="Meet us"
           title={
             <>
-              Meet the real{" "}
+              The person behind the{" "}
               <span className="font-script" style={{ color: "#3f5b9e" }}>
-                Kootahs
+                sound
               </span>
             </>
           }
-          subtitle="A small, dedicated team that treats your project like our own. Real people, real craft, no call centres."
+          subtitle="Real craft, real people. When you work with Koodh Media Group, you work directly with the maker \u2014 no middlemen, no call centres."
         />
 
         {/* Team */}
         <section className="max-w-[1600px] mx-auto px-6 md:px-10 pb-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-6xl">
+          <div className="grid grid-cols-1 gap-10 max-w-3xl">
             {team.map((m, i) => (
               <Reveal as="div" key={m.name} delay={i * 120} className="group">
                 <div className="aspect-[4/3] rounded-2xl overflow-hidden bg-neutral-100 ring-1 ring-black/5">
@@ -71,7 +61,6 @@ export default function MeetUs() {
                 <p className="mt-4 text-neutral-600 text-lg leading-relaxed max-w-xl">
                   {m.bio}
                 </p>
-                <BrandStrip brands={m.brands} className="mt-6" />
               </Reveal>
             ))}
           </div>

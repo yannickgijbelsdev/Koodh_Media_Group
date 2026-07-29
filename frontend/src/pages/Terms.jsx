@@ -6,13 +6,13 @@ export default function Terms() {
     <LegalPage
       title="Terms & Conditions"
       path="/terms"
-      updated="July 2025"
-      intro="These terms and conditions apply to all services, quotes and agreements provided by Koodh. By using our website or working with us, you agree to the terms set out below."
+      updated="June 2026"
+      intro="These terms and conditions apply to all services, quotes and agreements provided by Koodh Media Group. By using our website or working with us, you agree to the terms set out below."
       sections={[
         {
           heading: "Definitions",
           paragraphs: [
-            "In these terms, \u201CKoodh\u201D, \u201Cwe\u201D or \u201Cus\u201D refers to Koodh and its team. \u201CClient\u201D, \u201Cyou\u201D refers to the natural or legal person that enters into an agreement with Koodh. \u201CServices\u201D refers to any work delivered by Koodh, including websites and AI solutions.",
+            "In these terms, \u201CKoodh Media Group\u201D, \u201Cwe\u201D or \u201Cus\u201D refers to Koodh Media Group and its team. \u201CClient\u201D, \u201Cyou\u201D refers to the natural or legal person that enters into an agreement with Koodh Media Group. \u201CServices\u201D refers to any work delivered by Koodh Media Group, including audio branding and photography.",
           ],
         },
         {
@@ -39,15 +39,15 @@ export default function Terms() {
         {
           heading: "Intellectual property",
           paragraphs: [
-            "Upon full payment, the delivered end result is transferred to the Client, unless agreed otherwise. Koodh retains the right to use the work for portfolio and promotional purposes.",
-            "Third-party components, libraries and licences remain subject to their own terms.",
+            "Upon full payment, the delivered end result is transferred to the Client, unless agreed otherwise. Koodh Media Group retains the right to use the work for portfolio and promotional purposes.",
+            "Third-party components, music licences and stock remain subject to their own terms.",
           ],
         },
         {
           heading: "Liability",
           paragraphs: [
             "Our liability is limited to the amount invoiced for the relevant assignment. We are not liable for indirect or consequential damage, including lost profits or data.",
-            "We are not responsible for downtime or issues caused by third-party services or hosting providers outside our control.",
+            "We are not responsible for downtime or issues caused by third-party services outside our control.",
           ],
         },
         {
@@ -65,13 +65,13 @@ export default function Terms() {
         {
           heading: "Applicable law",
           paragraphs: [
-            "These terms are governed by the laws of the country in which Koodh is established. Any disputes will be submitted to the competent court in that jurisdiction.",
+            "These terms are governed by the laws of the country in which Koodh Media Group is established. Any disputes will be submitted to the competent court in that jurisdiction.",
           ],
         },
         {
           heading: "Contact",
           paragraphs: [
-            "Questions about these terms and conditions? Reach out to us at info@koodh.com.",
+            "Questions about these terms and conditions? Reach out to us at yannick.gijbels@koodhmediagroup.com.",
           ],
         },
       ]}

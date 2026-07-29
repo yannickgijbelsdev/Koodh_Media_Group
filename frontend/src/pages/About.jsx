@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { ArrowRight, ArrowUpRight, Code2, Cloud, Wifi } from "lucide-react";
+import { ArrowRight, ArrowUpRight, Camera, Radio } from "lucide-react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import CookieBanner from "../components/CookieBanner";
@@ -16,54 +16,29 @@ import {
 import accentBg from "../assets/accent-bg.png";
 import usePageMeta from "../lib/seo";
 import yannickImg from "../assets/yannick-gijbels.png";
-import chielImg from "../assets/chiel-van-gansewinkel.png";
-import { BrandStrip } from "../components/BrandStrip";
 
 const services = [
   {
-    name: "Website Development",
-    icon: Code2,
-    desc: "Fast, modern websites and web apps \u2014 with smart AI integration built right in.",
-    to: "/website-development",
+    name: "Photography",
+    icon: Camera,
+    desc: "Festival, concert and live event photography that captures the energy of the stage.",
+    to: "/photography",
   },
   {
-    name: "Microsoft 365 & Signatures",
-    icon: Cloud,
-    desc: "Cloud setup, migration and management, plus consistent Xink e-mail signatures.",
-    to: "/microsoft-365",
-  },
-  {
-    name: "IT Consultancy",
-    icon: Wifi,
-    desc: "Down-to-earth, on-site help with Wi-Fi, computers and everyday tech.",
-    to: "/it-consultancy",
+    name: "Audio & Imaging",
+    icon: Radio,
+    desc: "Sweepers, jingles, radio beds and imaging that give your station its signature sound.",
+    to: "/audio",
   },
 ];
 
-const toolKeys = [
-  "microsoft",
-  "xink",
-  "google",
-  "proxmox",
-  "unraid",
-  "unifi",
-  "tplink",
-  "omada",
-  "cloudflare",
-  "claude",
-  "openai",
-];
-
-const team = [
-  { name: "Chiel van Gansewinkel", photo: chielImg },
-  { name: "Yannick Gijbels", photo: yannickImg },
-];
+const team = [{ name: "Yannick Gijbels", photo: yannickImg }];
 
 export default function About() {
   usePageMeta({
     title: "About",
     description:
-      "Koodh builds websites and AI solutions, sets up Microsoft 365 and provides down-to-earth IT support across the Netherlands and Belgium.",
+      "Koodh Media Group creates audio branding for radio and shoots event photography across the Netherlands and Belgium \u2014 sweepers, jingles, imaging and live festival photography.",
     path: "/about",
   });
 
@@ -72,17 +47,17 @@ export default function About() {
       <Header />
       <main className="pt-[68px] bg-white">
         <PageHero
-          eyebrow="About Koodh"
+          eyebrow="About Koodh Media Group"
           title={
             <>
-              We make technology{" "}
+              Creating new{" "}
               <span className="font-script" style={{ color: "#3f5b9e" }}>
-                simple
+                experiences
               </span>
             </>
           }
           subtitle={koodhIntro}
-          chips={["Websites", "AI", "Microsoft 365", "IT support"]}
+          chips={["Radio imaging", "Jingles", "Event photography", "NL & BE"]}
         />
 
         {/* What we do */}
@@ -93,7 +68,7 @@ export default function About() {
               do
             </span>
           </h2>
-          <div className="mt-14 grid md:grid-cols-3 gap-8">
+          <div className="mt-14 grid md:grid-cols-2 gap-8 max-w-4xl">
             {services.map((s, i) => {
               const Icon = s.icon;
               return (
@@ -137,15 +112,14 @@ export default function About() {
               </h2>
               <div className="mt-8 space-y-5 text-lg md:text-xl text-[#f4efe3]/75 leading-relaxed">
                 <p>
-                  We start by understanding your business, your customers and your
-                  goals. From there we design and build digital products that are
-                  fast, reliable and a pleasure to use.
+                  We start by listening. We get to know your station, your event
+                  and the feeling you want your audience to have. From there we
+                  shape a sound and a look that are unmistakably yours.
                 </p>
                 <p>
-                  Whether it&rsquo;s a brand-new website, a smart AI tool like
-                  Clara, Microsoft 365 or hands-on IT support, we work closely with
-                  you as one team &mdash; keeping things clear, honest and moving
-                  forward.
+                  Whether it&rsquo;s a full imaging pack, a set of jingles or a
+                  weekend of festival photography, we work fast, stay on brand and
+                  deliver on time &mdash; so you can focus on the show.
                 </p>
               </div>
             </Reveal>
@@ -200,10 +174,10 @@ export default function About() {
           </div>
         </section>
 
-        {/* Clients + tools */}
+        {/* Clients */}
         <section className="bg-[#0e1728] border-t border-white/10 pb-24">
           <div className="max-w-[1600px] mx-auto px-6 md:px-10">
-            <h2 className="text-[#f4efe3] text-2xl md:text-3xl font-extrabold uppercase-tight">
+            <h2 className="text-[#f4efe3] text-2xl md:text-3xl font-extrabold uppercase-tight pt-16">
               Trusted <span className="font-script text-[#8aa0d8]">by</span>
             </h2>
             <div className="mt-10 grid grid-cols-2 md:grid-cols-4 gap-x-8 gap-y-12 items-center">
@@ -217,20 +191,6 @@ export default function About() {
                 </Reveal>
               ))}
             </div>
-
-            <div className="mt-20 pt-12 border-t border-white/10">
-              <h2 className="text-[#f4efe3] text-2xl md:text-3xl font-extrabold uppercase-tight">
-                We love to use{" "}
-                <span className="font-script text-[#8aa0d8]">brands</span> like
-              </h2>
-              <Reveal as="div" className="mt-10">
-                <BrandStrip
-                  brands={toolKeys}
-                  label={null}
-                  theme="dark"
-                />
-              </Reveal>
-            </div>
           </div>
         </section>
 
@@ -239,26 +199,26 @@ export default function About() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <Reveal>
               <h2 className="font-extrabold uppercase-tight text-black text-3xl md:text-5xl leading-[1.05]">
-                Meet the real{" "}
+                Meet the{" "}
                 <span className="font-script" style={{ color: "#3f5b9e" }}>
-                  Kootahs
+                  maker
                 </span>
               </h2>
               <p className="mt-6 text-lg text-neutral-600 leading-relaxed max-w-xl">
-                Behind Koodh is a small, dedicated team that treats your project
-                like our own. Get to know the people you&rsquo;ll actually be
-                working with.
+                Behind Koodh Media Group is Yannick &mdash; the person behind the
+                mic and the lens. Get to know who you&rsquo;ll actually be working
+                with.
               </p>
               <Link
                 to="/meet-us"
                 data-testid="about-meet-us-link"
                 className="mt-8 inline-flex items-center gap-2 bg-black text-white rounded-full pl-6 pr-5 py-3.5 text-sm font-semibold hover:bg-[#3f5b9e] transition-colors group"
               >
-                Meet the team
+                Meet us
                 <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
               </Link>
             </Reveal>
-            <Reveal delay={120} className="grid grid-cols-2 gap-5">
+            <Reveal delay={120} className="grid grid-cols-1 gap-5 max-w-sm">
               {team.map((m) => (
                 <div key={m.name} className="group">
                   <div className="aspect-[4/3] rounded-2xl overflow-hidden bg-neutral-100 ring-1 ring-black/5">

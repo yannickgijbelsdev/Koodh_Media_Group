@@ -1,6 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import { ArrowRight, Mail, CreditCard, MapPin, MessageCircle, PenTool, Rocket } from "lucide-react";
+import { ArrowRight, Mail, MapPin, MessageCircle, PenTool, Rocket } from "lucide-react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import CookieBanner from "../components/CookieBanner";
@@ -9,34 +8,19 @@ import CtaBand from "../components/CtaBand";
 import Reveal from "../components/Reveal";
 import usePageMeta from "../lib/seo";
 
-const channels = [
-  {
-    icon: Mail,
-    label: "General enquiries",
-    value: "info@koodh.com",
-    href: "mailto:info@koodh.com?subject=Project%20enquiry",
-    note: "Websites, AI, Microsoft 365 or IT support \u2014 start here.",
-  },
-  {
-    icon: CreditCard,
-    label: "Payments",
-    value: "payments@koodh.com",
-    href: "mailto:payments@koodh.com?subject=Payment%20question",
-    note: "Questions about an invoice or a payment.",
-  },
-];
+const EMAIL = "yannick.gijbels@koodhmediagroup.com";
 
 const steps = [
-  { icon: MessageCircle, title: "You reach out", text: "Send us a quick e-mail with your idea, question or challenge \u2014 no essay needed." },
+  { icon: MessageCircle, title: "You reach out", text: "Send us a quick e-mail with your station, event or idea \u2014 no essay needed." },
   { icon: PenTool, title: "We think along", text: "We reply with honest, jargon-free advice and a clear next step that fits you." },
-  { icon: Rocket, title: "We get to work", text: "Once it clicks, we roll up our sleeves and turn the plan into something real." },
+  { icon: Rocket, title: "We get to work", text: "Once it clicks, we roll up our sleeves and turn the plan into sound and images." },
 ];
 
 export default function Contact() {
   usePageMeta({
     title: "Contact",
     description:
-      "Get in touch with Koodh. Tell us about your website, AI, Microsoft 365 or IT question and we'll get back to you. Email info@koodh.com.",
+      "Get in touch with Koodh Media Group about radio imaging, jingles or event photography. E-mail yannick.gijbels@koodhmediagroup.com \u2014 based in Budel-Schoot (NL) and Pelt (BE).",
     path: "/contact",
   });
 
@@ -54,55 +38,52 @@ export default function Contact() {
               </span>
             </>
           }
-          subtitle={"Got an idea we can help with? Drop us a line and we\u2019ll get back to you \u2014 real people, no ticket numbers."}
-          chips={["Websites", "AI", "Microsoft 365", "IT support"]}
+          subtitle={"Got a station to brand or an event to capture? Drop us a line and we\u2019ll get back to you \u2014 real people, no ticket numbers."}
+          chips={["Radio imaging", "Jingles", "Event photography", "NL & BE"]}
         />
 
-        {/* Contact channels */}
+        {/* Contact channel */}
         <section className="max-w-[1600px] mx-auto px-6 md:px-10 pb-6">
-          <div className="grid md:grid-cols-2 gap-6">
-            {channels.map((c, i) => {
-              const Icon = c.icon;
-              return (
-                <Reveal as="div" key={c.label} delay={i * 100}>
-                  <a
-                    href={c.href}
-                    data-testid={`contact-channel-${i}`}
-                    className="group flex items-start gap-5 rounded-2xl border border-black/10 bg-neutral-50 p-7 md:p-8 hover:border-[#3f5b9e] hover:bg-white transition-colors h-full"
-                  >
-                    <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-[#3f5b9e]/10 text-[#3f5b9e] group-hover:bg-[#3f5b9e] group-hover:text-white transition-colors">
-                      <Icon size={20} strokeWidth={1.8} />
-                    </span>
-                    <div className="min-w-0">
-                      <p className="text-sm font-semibold uppercase tracking-widest text-neutral-500">
-                        {c.label}
-                      </p>
-                      <p className="mt-2 text-xl md:text-2xl font-bold text-black break-words">
-                        {c.value}
-                      </p>
-                      <p className="mt-3 text-neutral-600 leading-relaxed">{c.note}</p>
-                      <span className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-[#3f5b9e]">
-                        Send an e-mail
-                        <ArrowRight
-                          size={16}
-                          className="transition-transform group-hover:translate-x-1"
-                        />
-                      </span>
-                    </div>
-                  </a>
-                </Reveal>
-              );
-            })}
+          <div className="max-w-2xl">
+            <Reveal as="div">
+              <a
+                href={`mailto:${EMAIL}?subject=Project%20enquiry`}
+                data-testid="contact-channel-0"
+                className="group flex items-start gap-5 rounded-2xl border border-black/10 bg-neutral-50 p-7 md:p-8 hover:border-[#3f5b9e] hover:bg-white transition-colors h-full"
+              >
+                <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-[#3f5b9e]/10 text-[#3f5b9e] group-hover:bg-[#3f5b9e] group-hover:text-white transition-colors">
+                  <Mail size={20} strokeWidth={1.8} />
+                </span>
+                <div className="min-w-0">
+                  <p className="text-sm font-semibold uppercase tracking-widest text-neutral-500">
+                    General enquiries
+                  </p>
+                  <p className="mt-2 text-lg md:text-2xl font-bold text-black break-words">
+                    {EMAIL}
+                  </p>
+                  <p className="mt-3 text-neutral-600 leading-relaxed">
+                    Audio branding or event photography &mdash; start here.
+                  </p>
+                  <span className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-[#3f5b9e]">
+                    Send an e-mail
+                    <ArrowRight
+                      size={16}
+                      className="transition-transform group-hover:translate-x-1"
+                    />
+                  </span>
+                </div>
+              </a>
+            </Reveal>
           </div>
 
           {/* Where we work */}
-          <Reveal as="div" className="mt-6 flex flex-col sm:flex-row sm:items-center gap-3 rounded-2xl border border-black/10 p-6 md:p-7">
+          <Reveal as="div" className="mt-6 max-w-2xl flex flex-col sm:flex-row sm:items-center gap-3 rounded-2xl border border-black/10 p-6 md:p-7">
             <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-neutral-100 text-black">
               <MapPin size={18} strokeWidth={1.8} />
             </span>
             <p className="text-neutral-600">
-              <span className="font-semibold text-black">Working across the Netherlands &amp; Belgium.</span>{" "}
-              On-site where it helps, online where it&rsquo;s faster. &middot; KVK 42066318
+              <span className="font-semibold text-black">Budel-Schoot (NL) &amp; Pelt (BE).</span>{" "}
+              Working across Limburg, Brabant, the Netherlands and Belgium.
             </p>
           </Reveal>
         </section>
@@ -132,7 +113,6 @@ export default function Contact() {
           </div>
         </section>
 
-        {/* Explore services instead of a hard CTA */}
         <CtaBand
           title={
             <>

@@ -11,7 +11,7 @@ export default function Faq() {
   usePageMeta({
     title: "FAQ",
     description:
-      "Answers to frequently asked questions about Koodh \u2014 our services, AI, payment terms, support and how to start a project.",
+      "Answers to frequently asked questions about Koodh Media Group \u2014 radio imaging, jingles, event photography, delivery times and how to start.",
     path: "/faq",
   });
 
@@ -29,7 +29,7 @@ export default function Faq() {
               </span>
             </>
           }
-          subtitle={"Everything you might want to know about working with Koodh \u2014 from what we do to how we handle payments and support."}
+          subtitle={"Everything you might want to know about working with Koodh Media Group \u2014 from radio imaging and jingles to event photography and how we deliver."}
         />
 
         <FaqSection hideHeading />

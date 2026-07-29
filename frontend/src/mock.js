@@ -11,9 +11,8 @@ export const navLinks = [
   { label: "WORK", to: "/work" },
   { label: "ABOUT", to: "/about" },
   { label: "MEET US", to: "/meet-us" },
-  { label: "WEBSITE DEVELOPMENT", to: "/website-development" },
-  { label: "MICROSOFT 365", to: "/microsoft-365" },
-  { label: "IT CONSULTANCY", to: "/it-consultancy" },
+  { label: "PHOTOGRAPHY", to: "/photography" },
+  { label: "AUDIO", to: "/audio" },
   { label: "FAQ", to: "/faq" },
   { label: "CONTACT", to: "/contact" },
 ];
@@ -207,7 +206,7 @@ export const offices = ["London", "Madrid", "Vienna", "Tokyo"];
 
 // ===== KOODH ABOUT CONTENT =====
 export const koodhIntro =
-  "Koodh builds websites and AI solutions for small and large businesses. From the first line of code to smart automation, we are the right team for your IT solutions.";
+  "Koodh Media Group creates audio branding for radio and captures the energy of live events through photography. From sweepers, jingles and imaging to festival and concert stages, we help stations and events sound and look unforgettable.";
 
 export const koodhServices = [
   {
@@ -229,28 +228,28 @@ export const koodhServices = [
 
 export const koodhValues = [
   {
-    title: "Craft first",
-    text: "We care about the details. Clean code, thoughtful design and products that simply work.",
+    title: "Made to move",
+    text: "Every sweeper, jingle and photo is crafted to make people feel something the moment it hits.",
   },
   {
-    title: "Human & AI",
-    text: "We combine human judgement with the power of AI, so you get the best of both worlds.",
+    title: "On-brand, always",
+    text: "We shape a sound and a look that fit your station or event like a glove.",
   },
   {
-    title: "One team",
-    text: "We work as one team with our clients, from the first idea to launch and beyond.",
+    title: "Live energy",
+    text: "We live for the stage. We capture and craft the raw energy of live moments.",
   },
   {
-    title: "Built to last",
-    text: "We build solutions that grow with your business and stand the test of time.",
+    title: "Fast & reliable",
+    text: "Deadlines in radio and events are real. We deliver on time, every time.",
   },
 ];
 
 export const koodhStats = [
-  { value: "15+", label: "Projects" },
-  { value: "10+", label: "Years of experience" },
+  { value: "150+", label: "Jingles & sweepers produced" },
+  { value: "50+", label: "Events & festivals shot" },
   { value: "2", label: "Countries (NL & BE)" },
-  { value: "1M+", label: "Lines of code" },
+  { value: "10+", label: "Years behind the mic & lens" },
 ];
 
 // White logos from koodh.com (shown on a dark strip)

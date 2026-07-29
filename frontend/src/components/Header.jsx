@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { navLinks } from "../mock";
-import logo from "../assets/koodh-logo.png";
+import logo from "../assets/koodhmg-logo.png";
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
@@ -49,8 +49,8 @@ export default function Header() {
         >
           <img
             src={logo}
-            alt="Koodh"
-            className={`h-7 md:h-8 w-auto transition-all duration-300 ${
+            alt="Koodh Media Group"
+            className={`h-6 md:h-7 w-auto transition-all duration-300 ${
               light ? "brightness-0 invert" : ""
             }`}
           />
@@ -93,7 +93,7 @@ export default function Header() {
       {open && (
         <div className="fixed inset-0 z-[70] bg-white flex flex-col p-6 animate-fade-up">
           <div className="flex items-center justify-between h-[36px]">
-            <img src={logo} alt="Koodh" className="h-7 w-auto" />
+            <img src={logo} alt="Koodh Media Group" className="h-6 w-auto" />
             <button onClick={() => setOpen(false)} aria-label="Close menu">
               <X size={28} className="text-black" />
             </button>

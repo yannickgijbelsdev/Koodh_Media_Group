@@ -6,13 +6,13 @@ export default function Privacy() {
     <LegalPage
       title="Privacy & Cookie Policy"
       path="/privacy"
-      updated="July 2025"
-      intro="Koodh respects your privacy. This policy explains what personal data we collect, why we collect it, and how we use cookies on our website."
+      updated="June 2026"
+      intro="Koodh Media Group respects your privacy. This policy explains what personal data we collect, why we collect it, and how we use cookies on our website."
       sections={[
         {
           heading: "Who we are",
           paragraphs: [
-            "Koodh builds websites and AI solutions. For any privacy-related questions you can contact us at info@koodh.com.",
+            "Koodh Media Group creates audio branding and photography. For any privacy-related questions you can contact us at yannick.gijbels@koodhmediagroup.com.",
           ],
         },
         {
@@ -52,7 +52,7 @@ export default function Privacy() {
         {
           heading: "Your rights",
           paragraphs: [
-            "You have the right to access, correct or delete your personal data, and to object to or restrict its processing. To exercise these rights, contact us at info@koodh.com.",
+            "You have the right to access, correct or delete your personal data, and to object to or restrict its processing. To exercise these rights, contact us at yannick.gijbels@koodhmediagroup.com.",
           ],
         },
         {

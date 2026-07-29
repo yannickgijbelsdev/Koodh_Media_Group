@@ -1,5 +1,5 @@
 import axios from "axios";
-import logo from "./assets/koodh-logo.png";
+import logo from "./assets/koodhmg-logo.png";
 
 const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
 const API = `${BACKEND_URL}/api`;

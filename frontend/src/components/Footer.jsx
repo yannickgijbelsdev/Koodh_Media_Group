@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import logo from "../assets/koodh-logo.png";
+import logo from "../assets/koodhmg-logo.png";
 import footerBg from "../assets/footer-bg.webp";
 import { openCookiePreferences } from "../lib/consent";
 
@@ -30,20 +30,19 @@ export default function Footer() {
       <div className="relative max-w-[1600px] mx-auto px-6 md:px-10 pt-24 md:pt-32 pb-10">
         {/* Bottom row */}
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
-          <img src={logo} alt="Koodh" className="h-10 md:h-12 w-auto" />
+          <img src={logo} alt="Koodh Media Group" className="h-8 md:h-10 w-auto" />
           <p className="font-extrabold uppercase-tight text-2xl md:text-4xl lg:text-[2.6rem] leading-none">
-            The right{" "}
+            Creating new{" "}
             <span className="font-script lowercase font-semibold" style={{ color: NAVY }}>
-              team,
-            </span>{" "}
-            for your IT solutions.
+              experiences.
+            </span>
           </p>
         </div>
 
         {/* Legal links */}
         <div className="mt-10 pt-6 border-t border-[#1c2a4a]/10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
           <p className="text-[13px] text-[#1c2a4a]/50">
-            &copy; {new Date().getFullYear()} Koodh. All rights reserved. &middot; KVK 42066318
+            &copy; {new Date().getFullYear()} Koodh Media Group. All rights reserved.
           </p>
           <div className="flex flex-wrap items-center gap-6 text-[13px] font-medium text-[#1c2a4a]/80">
             <Link to="/terms" className="hover:text-[#1c2a4a] link-underline">

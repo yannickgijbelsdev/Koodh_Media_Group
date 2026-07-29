@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 
-const BASE_TITLE = "Koodh | The Right Team, For Your IT Solutions";
+const BASE_TITLE = "Koodh Media Group | Audio Branding & Event Photography";
 
 function setMeta(attr, key, content) {
   if (!content) return;
@@ -20,7 +20,7 @@ function setCanonical(path) {
     el.setAttribute("rel", "canonical");
     document.head.appendChild(el);
   }
-  el.setAttribute("href", `https://koodh.com${path || "/"}`);
+  el.setAttribute("href", `https://koodhmediagroup.com${path || "/"}`);
 }
 
 /**
@@ -28,7 +28,7 @@ function setCanonical(path) {
  */
 export default function usePageMeta({ title, description, path } = {}) {
   useEffect(() => {
-    const fullTitle = title ? `${title} | Koodh` : BASE_TITLE;
+    const fullTitle = title ? `${title} | Koodh Media Group` : BASE_TITLE;
     document.title = fullTitle;
 
     setMeta("name", "description", description);
@@ -39,7 +39,7 @@ export default function usePageMeta({ title, description, path } = {}) {
 
     if (path !== undefined) {
       setCanonical(path);
-      setMeta("property", "og:url", `https://koodh.com${path || "/"}`);
+      setMeta("property", "og:url", `https://koodhmediagroup.com${path || "/"}`);
     }
   }, [title, description, path]);
 }

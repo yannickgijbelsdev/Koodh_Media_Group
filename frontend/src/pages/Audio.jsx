@@ -10,23 +10,19 @@ import usePageMeta from "../lib/seo";
 
 const services = [
   {
-    title: "Radio imaging",
-    text: "The voice of your station between the songs. Sweepers, station IDs and imaging that instantly tell listeners where they are \u2014 sharp, energetic and unmistakably you.",
+    title: "Sweepers & promos",
+    text: "The voice of your station between the songs \u2014 sweepers, station IDs and promos that instantly tell listeners where they are and build hype for what\u2019s next.",
     features: [
       { title: "Sweepers & IDs", text: "Short, punchy audio that stamps your brand on every hour." },
-      { title: "Imaging packs", text: "A full, consistent sound signature across your entire schedule." },
-      { title: "Promo production", text: "Trailers and promos that build hype for shows and events." },
-      { title: "Voice direction", text: "We direct and mix voice-overs so every line lands perfectly." },
+      { title: "Promos", text: "Trailers and promos that build excitement for shows and events." },
     ],
   },
   {
     title: "Jingles & beds",
-    text: "Original jingles and music beds tailored to your format \u2014 from a big sung package to subtle underscores for talk segments, produced to fit your station like a glove.",
+    text: "Original jingles and music beds tailored to your format \u2014 energetic jingles and subtle underscores that fit your station like a glove.",
     features: [
-      { title: "Custom jingles", text: "Original, sung or instrumental jingles written around your brand." },
-      { title: "Radio & music beds", text: "Beds and underscores that sit perfectly beneath your presenters." },
-      { title: "Sound design", text: "Transitions, stings and effects that keep your sound moving." },
-      { title: "Full branding packs", text: "A complete, coherent audio identity, delivered ready to air." },
+      { title: "Jingles", text: "Original, on-brand jingles written around your station." },
+      { title: "Beds", text: "Radio and music beds that sit perfectly beneath your presenters." },
     ],
   },
 ];
@@ -54,9 +50,9 @@ export default function Audio() {
             </>
           }
           subtitle={
-            "Sweepers, jingles, radio beds and imaging that give your station its signature sound \u2014 crafted on brand and made to move."
+            "Promos, jingles, sweepers and beds that give your station its signature sound \u2014 crafted on brand and made to move."
           }
-          chips={["Imaging", "Sweepers", "Jingles", "Radio beds"]}
+          chips={["Promos", "Jingles", "Sweepers", "Beds"]}
         />
 
         {/* Services (text only) */}

@@ -12,11 +12,10 @@ const faqs = [
     q: "What kind of audio do you produce?",
     intro: "Our audio work includes:",
     list: [
-      "Radio imaging & sweepers",
-      "Custom jingles (sung or instrumental)",
+      "Sweepers & station IDs",
+      "Promos & trailers",
+      "Jingles",
       "Radio beds & music beds",
-      "Sound IDs & full branding packages",
-      "Promo & commercial production",
       "Voice-over direction and mixing",
     ],
   },
@@ -24,11 +23,6 @@ const faqs = [
     q: "What kind of photography do you offer?",
     intro:
       "Live event, festival and concert photography. We capture the artists on stage and the energy of the crowd, and deliver edited images fast so you can share them while the moment is still hot. Recent work includes Genk On Stage and Zomernoten.",
-  },
-  {
-    q: "Who do you work with?",
-    intro:
-      "We work with radio stations, festivals, event organisers and brands \u2014 from local stations looking for a fresh sound to festivals that need their weekend captured. Partners include radio group GRK and events such as Genk On Stage and Zomernoten.",
   },
   {
     q: "Where are you based and where do you work?",

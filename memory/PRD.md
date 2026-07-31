@@ -43,3 +43,12 @@ Rebranded the whole site from the IT company "Koodh" to **Koodh Media Group** (a
 - **Untouched per request**: Home & Work page body content (logo only).
 - Verified via screenshots: home (white logo on dark hero), work, about, photography, audio all render correctly; layout preserved.
 
+## 2026-06 — API-driven category feeds + hidden QR page
+- Backend `GET /api/feed/{category}` (server.py) proxies `clr.koodh.com/api/news/koodh-media-group/{category}` (site overridable via env `KOODH_SITE`). `GET /api/work` still = `homepagina` feed (drives Home carousel + Work grid).
+- `api.js`: added `fetchFeedItems(category)`.
+- New shared component `ApiWorkGrid.jsx` (loading skeletons → item grid → empty placeholder "New work is on the way — check back soon."). Items link to `/work/{id}` (WorkDetail).
+- **Photography** `/photography`: "Selected work" section now driven by the **fotografie** feed (was a hardcoded local gallery). Hero + 2 feature rows keep local festival photos (jeugd, triggerfinger). Removed unused local photos.
+- **Audio** `/audio`: removed the two generated placeholder images (radio-studio.jpg, sound-design.jpg deleted); page is now a text-only services block + "Selected work" driven by the **audio** feed.
+- **Hidden page** `/ext/drone/qr-code` (`QrPage.jsx`, NOT in nav): fetches the **qr** feed (1 item) → loads that article detail via `/api/work/{id}` → renders the single article (title/image/body) on a clean standalone page (logo only, no nav/footer).
+- fotografie & audio feeds currently empty (show placeholder); qr feed has 1 item ("Test"). Verified by testing agent (iteration_2.json): 4/4 pass.
+

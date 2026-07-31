@@ -1,4 +1,5 @@
 import React from "react";
+import { Music, Music2, PenTool, Palette, Camera, Aperture } from "lucide-react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import CookieBanner from "../components/CookieBanner";
@@ -9,12 +10,21 @@ import usePageMeta from "../lib/seo";
 import { koodhValues } from "../mock";
 import yannickImg from "../assets/yannick-gijbels.png";
 
+const tools = [
+  { name: "Pro Tools", Icon: Music },
+  { name: "Ableton", Icon: Music2 },
+  { name: "Affinity", Icon: PenTool },
+  { name: "Adobe", Icon: Palette },
+  { name: "Nikon Z8", Icon: Camera },
+  { name: "Canon EOS R5", Icon: Aperture },
+];
+
 const team = [
   {
     name: "Yannick Gijbels",
-    role: "Founder \u2014 Audio Branding & Event Photography",
+    role: "Photography & Audio Branding",
     photo: yannickImg,
-    bio: "Yannick is the person behind the mic and the lens. He produces radio imaging, sweepers and jingles that give stations their signature sound, and shoots the festivals and concerts where the energy is real. Hands-on, fast and always on brand \u2014 from the first idea to the final master.",
+    bio: "Yannick is the eye behind the lens and the ear behind the mic. As a photographer he freezes the raw energy of festivals, concerts and live stages; as an audio producer he crafts the sweepers, jingles and beds that give radio stations their signature sound. One maker, two crafts \u2014 hands-on, fast and always on brand, from the first frame and the first bar to the final master.",
   },
 ];
 
@@ -40,7 +50,7 @@ export default function MeetUs() {
               </span>
             </>
           }
-          subtitle="Real craft, real people. When you work with Koodh Media Group, you work directly with the maker \u2014 no middlemen, no call centres."
+          subtitle="Real craft, real people. When you work with Koodh Media Group, you work directly with the maker — no middlemen, no call centres."
         />
 
         {/* Team */}
@@ -61,6 +71,25 @@ export default function MeetUs() {
                 <p className="mt-4 text-neutral-600 text-lg leading-relaxed max-w-xl">
                   {m.bio}
                 </p>
+                <div className="mt-8">
+                  <p className="text-xs font-semibold uppercase tracking-[0.2em] text-neutral-400">
+                    Yannick works with
+                  </p>
+                  <div className="mt-3 flex flex-wrap items-center gap-2.5">
+                    {tools.map(({ name, Icon }) => (
+                      <span
+                        key={name}
+                        data-testid={`tool-${name.toLowerCase().replace(/\s+/g, "-")}`}
+                        className="inline-flex items-center gap-2 rounded-full pl-3 pr-4 py-2 bg-[#160638] ring-1 ring-black/5 hover:bg-[#2a1466] transition-colors"
+                      >
+                        <Icon size={15} strokeWidth={2} className="text-[#f0603f] shrink-0" />
+                        <span className="text-[13px] font-semibold text-white whitespace-nowrap">
+                          {name}
+                        </span>
+                      </span>
+                    ))}
+                  </div>
+                </div>
               </Reveal>
             ))}
           </div>

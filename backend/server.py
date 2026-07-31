@@ -72,13 +72,15 @@ async def get_status_checks():
 
 # ===== Koodh News API proxy (avoids CORS / mixed-content from HTTPS frontend) =====
 KOODH_NEWS_BASE = "https://clr.koodh.com/api/news"
+# Site/category that powers the homepage carousel and the Work grid.
+KOODH_WORK_FEED = os.environ.get("KOODH_WORK_FEED", "koodh-media-group/homepagina")
 
 @api_router.get("/work")
 async def get_work_items():
     """Proxy the Koodh news list endpoint used to power the Work grid."""
     try:
         async with httpx.AsyncClient(timeout=20, follow_redirects=True) as http:
-            resp = await http.get(f"{KOODH_NEWS_BASE}/koodh/koodh")
+            resp = await http.get(f"{KOODH_NEWS_BASE}/{KOODH_WORK_FEED}")
             resp.raise_for_status()
             return resp.json()
     except Exception as e:

@@ -23,7 +23,7 @@ export const mapArticleToWorkItem = (a) => ({
   cover: a.image_url,
   hover: a.image_url,
   icon: logo,
-  client: (a.category && a.category.name) || "Koodh",
+  client: (a.category && a.category.name) || "Koodh Media Group",
   category: formatDate(a.published_at),
   title: a.title,
 });

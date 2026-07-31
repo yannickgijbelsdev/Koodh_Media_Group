@@ -1,5 +1,4 @@
 import React from "react";
-import { Music, Music2, PenTool, Palette, Camera, Aperture } from "lucide-react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import CookieBanner from "../components/CookieBanner";
@@ -9,14 +8,20 @@ import Reveal from "../components/Reveal";
 import usePageMeta from "../lib/seo";
 import { koodhValues } from "../mock";
 import yannickImg from "../assets/yannick-gijbels.png";
+import proToolsLogo from "../assets/brands/icons/pro-tools.svg";
+import abletonLogo from "../assets/brands/icons/ableton.svg";
+import affinityLogo from "../assets/brands/icons/affinity.svg";
+import adobeLogo from "../assets/brands/icons/adobe.svg";
+import nikonLogo from "../assets/brands/icons/nikon.svg";
+import canonLogo from "../assets/brands/icons/canon.svg";
 
 const tools = [
-  { name: "Pro Tools", Icon: Music },
-  { name: "Ableton", Icon: Music2 },
-  { name: "Affinity", Icon: PenTool },
-  { name: "Adobe", Icon: Palette },
-  { name: "Nikon Z8", Icon: Camera },
-  { name: "Canon EOS R5", Icon: Aperture },
+  { name: "Pro Tools", logo: proToolsLogo },
+  { name: "Ableton", logo: abletonLogo },
+  { name: "Affinity", logo: affinityLogo },
+  { name: "Adobe", logo: adobeLogo },
+  { name: "Nikon Z8", logo: nikonLogo },
+  { name: "Canon EOS R5", logo: canonLogo },
 ];
 
 const team = [
@@ -76,13 +81,17 @@ export default function MeetUs() {
                     Yannick works with
                   </p>
                   <div className="mt-3 flex flex-wrap items-center gap-2.5">
-                    {tools.map(({ name, Icon }) => (
+                    {tools.map(({ name, logo }) => (
                       <span
                         key={name}
                         data-testid={`tool-${name.toLowerCase().replace(/\s+/g, "-")}`}
                         className="inline-flex items-center gap-2 rounded-full pl-3 pr-4 py-2 bg-[#160638] ring-1 ring-black/5 hover:bg-[#2a1466] transition-colors"
                       >
-                        <Icon size={15} strokeWidth={2} className="text-[#f0603f] shrink-0" />
+                        <img
+                          src={logo}
+                          alt={name}
+                          className="h-[15px] w-auto max-w-[42px] object-contain shrink-0"
+                        />
                         <span className="text-[13px] font-semibold text-white whitespace-nowrap">
                           {name}
                         </span>

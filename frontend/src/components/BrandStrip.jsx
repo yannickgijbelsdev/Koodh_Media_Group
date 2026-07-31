@@ -51,7 +51,7 @@ export const BrandStrip = ({ brands = [], label = "Works with", theme = "light",
               className={`inline-flex items-center gap-2 rounded-full pl-3 pr-4 py-2 transition-colors ${
                 onDark
                   ? "bg-white/[0.07] ring-1 ring-white/10 hover:bg-white/[0.14]"
-                  : "bg-[#0e1728] ring-1 ring-black/5 hover:bg-[#16233f]"
+                  : "bg-[#160638] ring-1 ring-black/5 hover:bg-[#2a1466]"
               }`}
             >
               <img

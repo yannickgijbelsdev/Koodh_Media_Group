@@ -24,7 +24,7 @@ export default function Faq() {
           title={
             <>
               Frequently asked{" "}
-              <span className="font-script" style={{ color: "#3f5b9e" }}>
+              <span className="font-script" style={{ color: "#f0603f" }}>
                 questions
               </span>
             </>
@@ -38,7 +38,7 @@ export default function Faq() {
           title={
             <>
               Still have a{" "}
-              <span className="font-script text-[#c7d3f2]">question</span>?
+              <span className="font-script text-[#ffb59c]">question</span>?
             </>
           }
         />

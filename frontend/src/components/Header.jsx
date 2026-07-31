@@ -62,7 +62,7 @@ export default function Header() {
               <Link
                 key={l.label}
                 to={l.to}
-                className="text-[14px] font-semibold tracking-wide whitespace-nowrap rounded-full bg-[#3f5b9e] text-white px-5 py-2 hover:bg-[#33497f] transition-colors duration-300"
+                className="text-[14px] font-semibold tracking-wide whitespace-nowrap rounded-full bg-[#f0603f] text-white px-5 py-2 hover:bg-[#d64a29] transition-colors duration-300"
               >
                 {l.label}
               </Link>

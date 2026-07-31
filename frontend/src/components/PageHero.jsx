@@ -23,7 +23,7 @@ export const PageHero = ({ eyebrow, title, subtitle, chips = [] }) => (
           {chips.map((c) => (
             <span
               key={c}
-              className="inline-flex items-center rounded-full border border-black/10 bg-neutral-50 px-4 py-1.5 text-sm font-medium text-neutral-700 hover:border-[#3f5b9e] hover:text-[#3f5b9e] transition-colors"
+              className="inline-flex items-center rounded-full border border-black/10 bg-neutral-50 px-4 py-1.5 text-sm font-medium text-neutral-700 hover:border-[#f0603f] hover:text-[#f0603f] transition-colors"
             >
               {c}
             </span>

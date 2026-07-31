@@ -4,11 +4,11 @@ import logo from "../assets/koodhmg-logo.png";
 import footerBg from "../assets/footer-bg.webp";
 import { openCookiePreferences } from "../lib/consent";
 
-const NAVY = "#3f5b9e";
+const NAVY = "#f0603f";
 
 export default function Footer() {
   return (
-    <footer className="relative overflow-hidden bg-white text-[#1c2a4a]">
+    <footer className="relative overflow-hidden bg-white text-[#241063]">
       {/* Chevron pattern background */}
       <div
         className="pointer-events-none absolute inset-0 bg-no-repeat"
@@ -40,20 +40,20 @@ export default function Footer() {
         </div>
 
         {/* Legal links */}
-        <div className="mt-10 pt-6 border-t border-[#1c2a4a]/10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-          <p className="text-[13px] text-[#1c2a4a]/50">
+        <div className="mt-10 pt-6 border-t border-[#241063]/10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+          <p className="text-[13px] text-[#241063]/50">
             &copy; {new Date().getFullYear()} Koodh Media Group. All rights reserved.
           </p>
-          <div className="flex flex-wrap items-center gap-6 text-[13px] font-medium text-[#1c2a4a]/80">
-            <Link to="/terms" className="hover:text-[#1c2a4a] link-underline">
+          <div className="flex flex-wrap items-center gap-6 text-[13px] font-medium text-[#241063]/80">
+            <Link to="/terms" className="hover:text-[#241063] link-underline">
               Terms &amp; Conditions
             </Link>
-            <Link to="/privacy" className="hover:text-[#1c2a4a] link-underline">
+            <Link to="/privacy" className="hover:text-[#241063] link-underline">
               Privacy &amp; Cookies
             </Link>
             <button
               onClick={openCookiePreferences}
-              className="hover:text-[#1c2a4a] link-underline"
+              className="hover:text-[#241063] link-underline"
             >
               Cookie settings
             </button>

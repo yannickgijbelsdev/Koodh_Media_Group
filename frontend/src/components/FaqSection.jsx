@@ -55,7 +55,7 @@ export default function FaqSection({ hideHeading = false }) {
         {!hideHeading && (
           <h2 className="font-extrabold uppercase-tight text-black text-3xl md:text-5xl">
             Frequently Asked{" "}
-            <span className="font-script" style={{ color: "#3f5b9e" }}>
+            <span className="font-script" style={{ color: "#f0603f" }}>
               questions
             </span>
           </h2>
@@ -83,7 +83,7 @@ export default function FaqSection({ hideHeading = false }) {
                       <ul className="space-y-2">
                         {f.list.map((li, k) => (
                           <li key={k} className="flex items-start gap-3">
-                            <span className="mt-2.5 w-1.5 h-1.5 rounded-full bg-[#3f5b9e] shrink-0" />
+                            <span className="mt-2.5 w-1.5 h-1.5 rounded-full bg-[#f0603f] shrink-0" />
                             <span>{li}</span>
                           </li>
                         ))}

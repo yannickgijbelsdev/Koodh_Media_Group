@@ -33,7 +33,7 @@ export default function Contact() {
           title={
             <>
               Let&rsquo;s start a{" "}
-              <span className="font-script" style={{ color: "#3f5b9e" }}>
+              <span className="font-script" style={{ color: "#f0603f" }}>
                 conversation
               </span>
             </>
@@ -49,9 +49,9 @@ export default function Contact() {
               <a
                 href={`mailto:${EMAIL}?subject=Project%20enquiry`}
                 data-testid="contact-channel-0"
-                className="group flex items-start gap-5 rounded-2xl border border-black/10 bg-neutral-50 p-7 md:p-8 hover:border-[#3f5b9e] hover:bg-white transition-colors h-full"
+                className="group flex items-start gap-5 rounded-2xl border border-black/10 bg-neutral-50 p-7 md:p-8 hover:border-[#f0603f] hover:bg-white transition-colors h-full"
               >
-                <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-[#3f5b9e]/10 text-[#3f5b9e] group-hover:bg-[#3f5b9e] group-hover:text-white transition-colors">
+                <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-[#f0603f]/10 text-[#f0603f] group-hover:bg-[#f0603f] group-hover:text-white transition-colors">
                   <Mail size={20} strokeWidth={1.8} />
                 </span>
                 <div className="min-w-0">
@@ -64,7 +64,7 @@ export default function Contact() {
                   <p className="mt-3 text-neutral-600 leading-relaxed">
                     Audio branding or event photography &mdash; start here.
                   </p>
-                  <span className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-[#3f5b9e]">
+                  <span className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-[#f0603f]">
                     Send an e-mail
                     <ArrowRight
                       size={16}
@@ -92,7 +92,7 @@ export default function Contact() {
         <section className="max-w-[1600px] mx-auto px-6 md:px-10 py-24 md:py-32">
           <h2 className="font-extrabold uppercase-tight text-black text-3xl md:text-5xl">
             What happens{" "}
-            <span className="font-script" style={{ color: "#3f5b9e" }}>
+            <span className="font-script" style={{ color: "#f0603f" }}>
               next
             </span>
           </h2>
@@ -103,7 +103,7 @@ export default function Contact() {
                 <Reveal key={s.title} delay={i * 100} className="border-t-2 border-black pt-6">
                   <div className="flex items-center gap-4">
                     <span className="font-extrabold text-3xl text-neutral-300">0{i + 1}</span>
-                    <Icon size={24} strokeWidth={1.7} className="text-[#3f5b9e]" />
+                    <Icon size={24} strokeWidth={1.7} className="text-[#f0603f]" />
                   </div>
                   <h3 className="mt-5 font-bold text-xl text-black">{s.title}</h3>
                   <p className="mt-3 text-neutral-600 leading-relaxed">{s.text}</p>
@@ -117,7 +117,7 @@ export default function Contact() {
           title={
             <>
               Not sure where to{" "}
-              <span className="font-script text-[#c7d3f2]">start</span>?
+              <span className="font-script text-[#ffb59c]">start</span>?
             </>
           }
           to="/about"

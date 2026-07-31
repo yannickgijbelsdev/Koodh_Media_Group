@@ -24,7 +24,7 @@ export const FeatureRow = ({
         <h2 className="font-extrabold uppercase-tight text-black text-3xl md:text-5xl leading-[1.05]">
           {title}{" "}
           {script && (
-            <span className="font-script" style={{ color: "#3f5b9e" }}>
+            <span className="font-script" style={{ color: "#f0603f" }}>
               {script}
             </span>
           )}{" "}

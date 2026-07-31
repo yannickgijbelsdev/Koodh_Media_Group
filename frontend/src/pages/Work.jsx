@@ -39,7 +39,7 @@ export default function Work() {
           title={
             <>
               Our recent{" "}
-              <span className="font-script" style={{ color: "#3f5b9e" }}>
+              <span className="font-script" style={{ color: "#f0603f" }}>
                 work
               </span>
             </>
@@ -74,7 +74,7 @@ export default function Work() {
           title={
             <>
               Want to be our next{" "}
-              <span className="font-script text-[#c7d3f2]">project</span>?
+              <span className="font-script text-[#ffb59c]">project</span>?
             </>
           }
           label="Start a project"

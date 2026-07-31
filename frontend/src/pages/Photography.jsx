@@ -27,7 +27,7 @@ export default function Photography() {
           title={
             <>
               Capturing the{" "}
-              <span className="font-script" style={{ color: "#3f5b9e" }}>
+              <span className="font-script" style={{ color: "#f0603f" }}>
                 moment
               </span>
             </>
@@ -82,7 +82,7 @@ export default function Photography() {
           title={
             <>
               Got an event to{" "}
-              <span className="font-script text-[#c7d3f2]">capture</span>?
+              <span className="font-script text-[#ffb59c]">capture</span>?
             </>
           }
           label="Book a shoot"

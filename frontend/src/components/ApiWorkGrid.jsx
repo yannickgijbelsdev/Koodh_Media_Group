@@ -27,7 +27,7 @@ export default function ApiWorkGrid({ category, heading, script, testId }) {
     >
       <h2 className="font-extrabold uppercase-tight text-black text-3xl md:text-5xl">
         {heading}{" "}
-        <span className="font-script" style={{ color: "#3f5b9e" }}>
+        <span className="font-script" style={{ color: "#f0603f" }}>
           {script}
         </span>
       </h2>

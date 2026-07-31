@@ -44,7 +44,7 @@ export default function Audio() {
           title={
             <>
               Imaging for your{" "}
-              <span className="font-script" style={{ color: "#3f5b9e" }}>
+              <span className="font-script" style={{ color: "#f0603f" }}>
                 brand
               </span>
             </>
@@ -91,7 +91,7 @@ export default function Audio() {
           title={
             <>
               Ready to sound{" "}
-              <span className="font-script text-[#c7d3f2]">unmistakable</span>?
+              <span className="font-script text-[#ffb59c]">unmistakable</span>?
             </>
           }
           label={"Let\u2019s talk audio"}

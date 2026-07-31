@@ -35,7 +35,7 @@ export default function MeetUs() {
           title={
             <>
               The person behind the{" "}
-              <span className="font-script" style={{ color: "#3f5b9e" }}>
+              <span className="font-script" style={{ color: "#f0603f" }}>
                 sound
               </span>
             </>
@@ -57,7 +57,7 @@ export default function MeetUs() {
                   />
                 </div>
                 <h3 className="mt-6 font-bold text-black text-2xl">{m.name}</h3>
-                <p className="text-[#3f5b9e] font-medium">{m.role}</p>
+                <p className="text-[#f0603f] font-medium">{m.role}</p>
                 <p className="mt-4 text-neutral-600 text-lg leading-relaxed max-w-xl">
                   {m.bio}
                 </p>
@@ -70,7 +70,7 @@ export default function MeetUs() {
         <section className="max-w-[1600px] mx-auto px-6 md:px-10 py-24 md:py-32">
           <h2 className="font-extrabold uppercase-tight text-black text-3xl md:text-5xl max-w-3xl">
             What we stand{" "}
-            <span className="font-script" style={{ color: "#3f5b9e" }}>
+            <span className="font-script" style={{ color: "#f0603f" }}>
               for
             </span>
           </h2>
@@ -95,7 +95,7 @@ export default function MeetUs() {
           title={
             <>
               Want to work{" "}
-              <span className="font-script text-[#c7d3f2]">with us</span>?
+              <span className="font-script text-[#ffb59c]">with us</span>?
             </>
           }
           label="Get in touch"

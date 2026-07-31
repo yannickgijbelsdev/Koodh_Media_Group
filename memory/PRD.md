@@ -43,7 +43,14 @@ Rebranded the whole site from the IT company "Koodh" to **Koodh Media Group** (a
 - **Untouched per request**: Home & Work page body content (logo only).
 - Verified via screenshots: home (white logo on dark hero), work, about, photography, audio all render correctly; layout preserved.
 
-## 2026-06 — API-driven category feeds + hidden QR page
+## 2026-06 — Brand recolor (logo purple + orange)
+Replaced the site-wide navy/blue palette with the logo's colors: **orange** `#f0603f` as the accent (script highlights, buttons, links, icons, chip hover; hover `#d64a29`) and **deep purple** for dark sections & gradients (`#1c2a4a`→`#241063`, `#0e1728`→`#160638`, `#22305a`→`#341a7a`, `#16233f`→`#2a1466`). Light-blue script-on-dark (`#c7d3f2`,`#8aa0d8`)→peach `#ffb59c`. CtaBand gradient now deep-purple→purple→orange. Applied via global replace across all jsx/js/css + index.html theme-color. Neutrals (cream `#f4efe3`, white, grey) kept. Verified: About page renders with orange accents + orange CONTACT button; compiles clean.
+
+## 2026-06 — Footer stripes + Audio/FAQ copy
+- Footer background swapped to supplied `KOODH_MG_STRIPES_WEB.webp` (saved as `footer-bg.webp`, same import path); white wash overlay lightened so coral stripes show.
+- Audio page: removed all "sung" references + imaging packs; offerings now exactly Promos, Jingles, Sweepers, Beds (chips + two service blocks).
+- FAQ: removed the "Who do you work with?" item and business/commercial references; audio list de-business-ified and "sung" removed.
+
 - Backend `GET /api/feed/{category}` (server.py) proxies `clr.koodh.com/api/news/koodh-media-group/{category}` (site overridable via env `KOODH_SITE`). `GET /api/work` still = `homepagina` feed (drives Home carousel + Work grid).
 - `api.js`: added `fetchFeedItems(category)`.
 - New shared component `ApiWorkGrid.jsx` (loading skeletons → item grid → empty placeholder "New work is on the way — check back soon."). Items link to `/work/{id}` (WorkDetail).

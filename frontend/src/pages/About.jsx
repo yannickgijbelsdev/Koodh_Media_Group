@@ -51,7 +51,7 @@ export default function About() {
           title={
             <>
               Creating new{" "}
-              <span className="font-script" style={{ color: "#3f5b9e" }}>
+              <span className="font-script" style={{ color: "#f0603f" }}>
                 experiences
               </span>
             </>
@@ -64,7 +64,7 @@ export default function About() {
         <section className="max-w-[1600px] mx-auto px-6 md:px-10 py-16 md:py-24">
           <h2 className="font-extrabold uppercase-tight text-black text-3xl md:text-5xl">
             What we{" "}
-            <span className="font-script" style={{ color: "#3f5b9e" }}>
+            <span className="font-script" style={{ color: "#f0603f" }}>
               do
             </span>
           </h2>
@@ -76,14 +76,14 @@ export default function About() {
                   <Link
                     to={s.to}
                     data-testid={`about-service-${i}`}
-                    className="group block h-full border-t-2 border-black pt-6 hover:border-[#3f5b9e] transition-colors"
+                    className="group block h-full border-t-2 border-black pt-6 hover:border-[#f0603f] transition-colors"
                   >
-                    <Icon size={30} strokeWidth={1.6} className="text-black group-hover:text-[#3f5b9e] transition-colors" />
+                    <Icon size={30} strokeWidth={1.6} className="text-black group-hover:text-[#f0603f] transition-colors" />
                     <h3 className="mt-5 font-extrabold uppercase-tight text-2xl text-black">
                       {s.name}
                     </h3>
                     <p className="mt-3 text-neutral-600 leading-relaxed">{s.desc}</p>
-                    <span className="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-[#3f5b9e]">
+                    <span className="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-[#f0603f]">
                       Learn more
                       <ArrowUpRight
                         size={16}
@@ -98,17 +98,17 @@ export default function About() {
         </section>
 
         {/* How we work */}
-        <section className="relative overflow-hidden bg-[#0e1728] text-[#f4efe3] py-24 md:py-32">
+        <section className="relative overflow-hidden bg-[#160638] text-[#f4efe3] py-24 md:py-32">
           <div
             className="pointer-events-none absolute inset-0 opacity-50 bg-cover bg-center"
             style={{ backgroundImage: `url(${accentBg})` }}
           />
-          <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-[#0e1728] via-[#0e1728]/90 to-[#0e1728]/70" />
+          <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-[#160638] via-[#160638]/90 to-[#160638]/70" />
           <div className="relative max-w-[1600px] mx-auto px-6 md:px-10">
             <Reveal className="max-w-3xl">
               <h2 className="font-extrabold uppercase-tight text-3xl md:text-5xl leading-[1.05]">
                 How we{" "}
-                <span className="font-script text-[#8aa0d8]">work</span>
+                <span className="font-script text-[#ffb59c]">work</span>
               </h2>
               <div className="mt-8 space-y-5 text-lg md:text-xl text-[#f4efe3]/75 leading-relaxed">
                 <p>
@@ -130,7 +130,7 @@ export default function About() {
         <section className="max-w-[1600px] mx-auto px-6 md:px-10 py-24 md:py-32">
           <h2 className="font-extrabold uppercase-tight text-black text-3xl md:text-5xl max-w-3xl">
             What we stand{" "}
-            <span className="font-script" style={{ color: "#3f5b9e" }}>
+            <span className="font-script" style={{ color: "#f0603f" }}>
               for
             </span>
           </h2>
@@ -152,12 +152,12 @@ export default function About() {
         </section>
 
         {/* Stats */}
-        <section className="relative overflow-hidden bg-[#0e1728] text-[#f4efe3] py-24">
+        <section className="relative overflow-hidden bg-[#160638] text-[#f4efe3] py-24">
           <div
             className="pointer-events-none absolute inset-0 opacity-50 bg-cover bg-center"
             style={{ backgroundImage: `url(${accentBg})` }}
           />
-          <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-[#0e1728]/70 via-[#0e1728]/85 to-[#0e1728]" />
+          <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-[#160638]/70 via-[#160638]/85 to-[#160638]" />
           <div className="relative max-w-[1600px] mx-auto px-6 md:px-10">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-10">
               {koodhStats.map((s, i) => (
@@ -175,10 +175,10 @@ export default function About() {
         </section>
 
         {/* Clients */}
-        <section className="bg-[#0e1728] border-t border-white/10 pb-24">
+        <section className="bg-[#160638] border-t border-white/10 pb-24">
           <div className="max-w-[1600px] mx-auto px-6 md:px-10">
             <h2 className="text-[#f4efe3] text-2xl md:text-3xl font-extrabold uppercase-tight pt-16">
-              Trusted <span className="font-script text-[#8aa0d8]">by</span>
+              Trusted <span className="font-script text-[#ffb59c]">by</span>
             </h2>
             <div className="mt-10 grid grid-cols-2 md:grid-cols-4 gap-x-8 gap-y-12 items-center">
               {koodhClients.map((c, i) => (
@@ -200,7 +200,7 @@ export default function About() {
             <Reveal>
               <h2 className="font-extrabold uppercase-tight text-black text-3xl md:text-5xl leading-[1.05]">
                 Meet the{" "}
-                <span className="font-script" style={{ color: "#3f5b9e" }}>
+                <span className="font-script" style={{ color: "#f0603f" }}>
                   maker
                 </span>
               </h2>
@@ -212,7 +212,7 @@ export default function About() {
               <Link
                 to="/meet-us"
                 data-testid="about-meet-us-link"
-                className="mt-8 inline-flex items-center gap-2 bg-black text-white rounded-full pl-6 pr-5 py-3.5 text-sm font-semibold hover:bg-[#3f5b9e] transition-colors group"
+                className="mt-8 inline-flex items-center gap-2 bg-black text-white rounded-full pl-6 pr-5 py-3.5 text-sm font-semibold hover:bg-[#f0603f] transition-colors group"
               >
                 Meet us
                 <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
@@ -240,7 +240,7 @@ export default function About() {
           title={
             <>
               Have a{" "}
-              <span className="font-script text-[#c7d3f2]">project</span> in mind?
+              <span className="font-script text-[#ffb59c]">project</span> in mind?
             </>
           }
         />

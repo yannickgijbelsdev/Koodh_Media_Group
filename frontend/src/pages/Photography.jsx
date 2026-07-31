@@ -5,27 +5,10 @@ import CookieBanner from "../components/CookieBanner";
 import PageHero from "../components/PageHero";
 import FeatureRow from "../components/FeatureRow";
 import CtaBand from "../components/CtaBand";
-import Reveal from "../components/Reveal";
+import ApiWorkGrid from "../components/ApiWorkGrid";
 import usePageMeta from "../lib/seo";
 import jeugd from "../assets/photography/jeugd.webp";
 import triggerfinger from "../assets/photography/triggerfinger.webp";
-import jonna from "../assets/photography/jonna-fraser.webp";
-import tourist from "../assets/photography/tourist-lemc.webp";
-import davina from "../assets/photography/davina-michelle.webp";
-import pommelien from "../assets/photography/pommelien-thijs.webp";
-import laura from "../assets/photography/laura-tesoro.webp";
-import sylver from "../assets/photography/sylver.webp";
-
-const gallery = [
-  { img: jeugd, title: "De Jeugd van Tegenwoordig", sub: "Genk On Stage 2026" },
-  { img: triggerfinger, title: "Triggerfinger", sub: "Genk On Stage 2026" },
-  { img: jonna, title: "Jonna Fraser", sub: "Genk On Stage 2026" },
-  { img: tourist, title: "Tourist LeMC", sub: "Genk On Stage 2026" },
-  { img: laura, title: "Laura Tesoro", sub: "Zomernoten 2025" },
-  { img: sylver, title: "Sylver", sub: "Zomernoten 2025" },
-  { img: davina, title: "Davina Michelle", sub: "Genk On Stage 2024" },
-  { img: pommelien, title: "Pommelien Thijs", sub: "Genk On Stage 2023" },
-];
 
 export default function Photography() {
   usePageMeta({
@@ -87,36 +70,13 @@ export default function Photography() {
           caption={{ title: "Triggerfinger", sub: "Genk On Stage 2026" }}
         />
 
-        {/* Gallery */}
-        <section className="max-w-[1600px] mx-auto px-6 md:px-10 py-24 md:py-32">
-          <h2 className="font-extrabold uppercase-tight text-black text-3xl md:text-5xl">
-            Selected{" "}
-            <span className="font-script" style={{ color: "#3f5b9e" }}>
-              work
-            </span>
-          </h2>
-          <div className="mt-14 grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-5">
-            {gallery.map((g, i) => (
-              <Reveal
-                as="div"
-                key={g.title + i}
-                delay={(i % 4) * 80}
-                className="group relative aspect-[4/5] rounded-xl overflow-hidden bg-neutral-100 ring-1 ring-black/5"
-              >
-                <img
-                  src={g.img}
-                  alt={g.title}
-                  loading="lazy"
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                />
-                <div className="absolute inset-x-0 bottom-0 p-4 bg-gradient-to-t from-black/75 to-transparent">
-                  <p className="text-white font-bold text-sm md:text-base leading-tight">{g.title}</p>
-                  <p className="text-white/70 text-xs">{g.sub}</p>
-                </div>
-              </Reveal>
-            ))}
-          </div>
-        </section>
+        {/* Selected work (API-driven) */}
+        <ApiWorkGrid
+          category="fotografie"
+          heading="Selected"
+          script="work"
+          testId="photography-work-grid"
+        />
 
         <CtaBand
           title={

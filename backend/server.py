@@ -72,8 +72,21 @@ async def get_status_checks():
 
 # ===== Koodh News API proxy (avoids CORS / mixed-content from HTTPS frontend) =====
 KOODH_NEWS_BASE = "https://clr.koodh.com/api/news"
+KOODH_SITE = os.environ.get("KOODH_SITE", "koodh-media-group")
 # Site/category that powers the homepage carousel and the Work grid.
 KOODH_WORK_FEED = os.environ.get("KOODH_WORK_FEED", "koodh-media-group/homepagina")
+
+@api_router.get("/feed/{category}")
+async def get_feed(category: str):
+    """Proxy a Koodh Media Group category feed (e.g. fotografie, audio, qr)."""
+    try:
+        async with httpx.AsyncClient(timeout=20, follow_redirects=True) as http:
+            resp = await http.get(f"{KOODH_NEWS_BASE}/{KOODH_SITE}/{category}")
+            resp.raise_for_status()
+            return resp.json()
+    except Exception as e:
+        logger.error(f"Failed to fetch Koodh feed {category}: {e}")
+        return {"items": [], "count": 0, "error": str(e)}
 
 @api_router.get("/work")
 async def get_work_items():

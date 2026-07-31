@@ -12,6 +12,7 @@ import Contact from "./pages/Contact";
 import WorkDetail from "./pages/WorkDetail";
 import Terms from "./pages/Terms";
 import Privacy from "./pages/Privacy";
+import QrPage from "./pages/QrPage";
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -38,6 +39,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/terms" element={<Terms />} />
           <Route path="/privacy" element={<Privacy />} />
+          <Route path="/ext/drone/qr-code" element={<QrPage />} />
         </Routes>
       </BrowserRouter>
     </div>

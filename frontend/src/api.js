@@ -34,6 +34,12 @@ export const fetchWorkItems = async () => {
   return items.map(mapArticleToWorkItem);
 };
 
+export const fetchFeedItems = async (category) => {
+  const res = await axios.get(`${API}/feed/${category}`);
+  const items = (res.data && res.data.items) || [];
+  return items.map(mapArticleToWorkItem);
+};
+
 export const fetchWorkArticle = async (id) => {
   const res = await axios.get(`${API}/work/${id}`);
   return res.data;

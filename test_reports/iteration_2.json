@@ -1,0 +1,24 @@
+{
+  "summary": "Frontend-only testing of the four requested behaviors: hidden /ext/drone/qr-code single-article page, Photography 'Selected work' wired to fotografie feed (empty->placeholder), Audio 'Selected work' wired to audio feed (empty->placeholder) with old placeholder images removed, and confirmation that /ext/drone/qr-code is not in nav. All four pass.",
+  "backend_issues": {"critical": [], "minor": []},
+  "frontend_issues": {
+    "ui_bugs": [],
+    "integration_issues": [],
+    "design_issues": []
+  },
+  "test_results": {
+    "qr_page_renders_single_article": "PASS - data-testid='qr-article' rendered after both sequential fetches (/api/feed/qr then /api/work/{id}). Title 'TEST' and body 'test' visible with image and copyright caption. Skeleton disappeared as expected.",
+    "photography_selected_work_empty_placeholder": "PASS - data-testid='photography-work-grid' loads and shows 'New work is on the way — check back soon.' Hero and feature rows above still render.",
+    "audio_selected_work_empty_placeholder": "PASS - data-testid='audio-work-grid' loads and shows placeholder text. Old radio-studio / sound-design placeholder images are no longer present in the page HTML.",
+    "qr_route_hidden_from_nav": "PASS - header nav does not contain 'qr-code' or '/ext/drone'. Nav shows WORK, ABOUT, MEET US, PHOTOGRAPHY, AUDIO, FAQ, CONTACT only."
+  },
+  "test_report_links": [],
+  "action_items": [],
+  "critical_code_review_comments": [],
+  "updated_files": [],
+  "success_rate": {"backend": "N/A (not requested)", "frontend": "100% (4/4)"},
+  "seed_data_creation": "None",
+  "retest_needed": false,
+  "should_main_agent_self_test": false,
+  "context_for_next_testing_agent": "QR page uses two sequential fetches; needs networkidle + ~3s extra wait to render. fotografie/audio/qr/homepagina feeds are external and 'qr' currently has exactly 1 item (id 91c6c4d9-1735-41ec-a175-b97bc59305be, title 'Test'). All four target behaviors verified working."
+}

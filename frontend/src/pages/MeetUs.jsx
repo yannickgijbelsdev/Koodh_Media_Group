@@ -29,7 +29,7 @@ const team = [
     name: "Yannick Gijbels",
     role: "Photography & Audio Branding",
     photo: yannickImg,
-    bio: "Yannick is the eye behind the lens and the ear behind the mic. As a photographer he freezes the raw energy of festivals, concerts and live stages; as an audio producer he crafts the sweepers, jingles and beds that give radio stations their signature sound. One maker, two crafts \u2014 hands-on, fast and always on brand, from the first frame and the first bar to the final master.",
+    bio: "",
   },
 ];
 
@@ -73,12 +73,9 @@ export default function MeetUs() {
                 </div>
                 <h3 className="mt-6 font-bold text-black text-2xl">{m.name}</h3>
                 <p className="text-[#f0603f] font-medium">{m.role}</p>
-                <p className="mt-4 text-neutral-600 text-lg leading-relaxed max-w-xl">
-                  {m.bio}
-                </p>
                 <div className="mt-8">
                   <p className="text-xs font-semibold uppercase tracking-[0.2em] text-neutral-400">
-                    Yannick works with
+                    Works with
                   </p>
                   <div className="mt-3 flex flex-wrap items-center gap-2.5">
                     {tools.map(({ name, logo }) => (

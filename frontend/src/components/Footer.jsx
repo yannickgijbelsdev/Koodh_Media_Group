@@ -23,7 +23,7 @@ export default function Footer() {
         className="pointer-events-none absolute inset-0"
         style={{
           background:
-            "linear-gradient(to bottom, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.72) 45%, rgba(255,255,255,0.6) 100%)",
+            "linear-gradient(to bottom, rgba(255,255,255,0.72) 0%, rgba(255,255,255,0.58) 45%, rgba(255,255,255,0.48) 100%)",
         }}
       />
 

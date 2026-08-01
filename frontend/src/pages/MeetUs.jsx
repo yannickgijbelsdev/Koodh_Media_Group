@@ -8,28 +8,37 @@ import Reveal from "../components/Reveal";
 import usePageMeta from "../lib/seo";
 import { koodhValues } from "../mock";
 import yannickImg from "../assets/yannick-gijbels.png";
+import chielImg from "../assets/chiel-van-gansewinkel.png";
 import proToolsLogo from "../assets/brands/icons/pro-tools.svg";
 import abletonLogo from "../assets/brands/icons/ableton.svg";
 import affinityLogo from "../assets/brands/icons/affinity.svg";
 import adobeLogo from "../assets/brands/icons/adobe.svg";
 import nikonLogo from "../assets/brands/icons/nikon.svg";
 import canonLogo from "../assets/brands/icons/canon.svg";
-
-const tools = [
-  { name: "Pro Tools", logo: proToolsLogo },
-  { name: "Ableton", logo: abletonLogo },
-  { name: "Affinity", logo: affinityLogo },
-  { name: "Adobe", logo: adobeLogo },
-  { name: "Nikon Z8", logo: nikonLogo },
-  { name: "Canon EOS R5", logo: canonLogo },
-];
+import djiLogo from "../assets/brands/icons/dji.svg";
 
 const team = [
   {
     name: "Yannick Gijbels",
     role: "Photography & Audio Branding",
     photo: yannickImg,
-    bio: "",
+    tools: [
+      { name: "Pro Tools", logo: proToolsLogo },
+      { name: "Ableton", logo: abletonLogo },
+      { name: "Affinity", logo: affinityLogo },
+      { name: "Adobe", logo: adobeLogo },
+      { name: "Nikon Z8", logo: nikonLogo },
+      { name: "Canon EOS R5", logo: canonLogo },
+    ],
+  },
+  {
+    name: "Chiel van Gansewinkel",
+    role: "Drone Photography & Videography",
+    photo: chielImg,
+    tools: [
+      { name: "DJI", logo: djiLogo },
+      { name: "Adobe", logo: adobeLogo },
+    ],
   },
 ];
 
@@ -37,7 +46,7 @@ export default function MeetUs() {
   usePageMeta({
     title: "Meet Us",
     description:
-      "Meet Yannick Gijbels, founder of Koodh Media Group \u2014 creating audio branding for radio and shooting live event photography across the Netherlands and Belgium.",
+      "Meet the real Kootah\u2019s behind Koodh Media Group \u2014 audio branding, photography and drone work across the Netherlands and Belgium.",
     path: "/meet-us",
   });
 
@@ -49,18 +58,19 @@ export default function MeetUs() {
           eyebrow="Meet us"
           title={
             <>
-              The person behind the{" "}
+              The Real{" "}
               <span className="font-script" style={{ color: "#f0603f" }}>
-                sound
-              </span>
+                Kootah&rsquo;s
+              </span>{" "}
+              behind Koodh Media Group
             </>
           }
-          subtitle="Real craft, real people. When you work with Koodh Media Group, you work directly with the maker — no middlemen, no call centres."
+          subtitle="These are the people that makes your content whenever you need it."
         />
 
         {/* Team */}
         <section className="max-w-[1600px] mx-auto px-6 md:px-10 pb-8">
-          <div className="grid grid-cols-1 gap-10 max-w-3xl">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-14">
             {team.map((m, i) => (
               <Reveal as="div" key={m.name} delay={i * 120} className="group">
                 <div className="aspect-[4/3] rounded-2xl overflow-hidden bg-neutral-100 ring-1 ring-black/5">
@@ -78,7 +88,7 @@ export default function MeetUs() {
                     Works with
                   </p>
                   <div className="mt-3 flex flex-wrap items-center gap-2.5">
-                    {tools.map(({ name, logo }) => (
+                    {m.tools.map(({ name, logo }) => (
                       <span
                         key={name}
                         data-testid={`tool-${name.toLowerCase().replace(/\s+/g, "-")}`}

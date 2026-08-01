@@ -151,7 +151,7 @@ export default function WorkDetail() {
               {tracks.length > 0 && (
                 <div className="mt-10" data-testid="article-audio">
                   {tracks.map((t, i) => (
-                    <AudioPlayer key={t.src + i} src={t.src} title={t.title} />
+                    <AudioPlayer key={t.src + i} src={t.src} title={t.title || article.title} />
                   ))}
                 </div>
               )}

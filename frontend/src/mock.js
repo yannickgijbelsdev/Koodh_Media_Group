@@ -3,6 +3,8 @@ import thomasmoreLogo from "./assets/clients/thomasmore_w.svg";
 import radiogroepLogo from "./assets/clients/radiogroep_w.png";
 import wonderlandLogo from "./assets/clients/wonderland_w.png";
 import grkLogo from "./assets/clients/grk_w.png";
+import ovbLogo from "./assets/clients/ovb_w.svg";
+import topLogo from "./assets/clients/top_w.png";
 
 const IMG = "https://saffron.imgix.net";
 const p = "?ixlib=js-3.8.0&q=80&auto=format%2Ccompress&fit=crop";
@@ -254,10 +256,10 @@ export const koodhStats = [
 
 // White logos from koodh.com (shown on a dark strip)
 export const koodhClients = [
-  { name: "Thomas More", logo: thomasmoreLogo },
   { name: "Radiogroep", logo: radiogroepLogo },
-  { name: "Studio Wonderland", logo: wonderlandLogo },
   { name: "GRK", logo: grkLogo },
+  { name: "OVB Congres", logo: ovbLogo },
+  { name: "TOP", logo: topLogo },
 ];
 
 // People-free imagery from Pexels/Unsplash

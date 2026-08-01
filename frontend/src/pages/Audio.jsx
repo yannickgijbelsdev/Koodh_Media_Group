@@ -91,7 +91,7 @@ export default function Audio() {
           title={
             <>
               Ready to sound{" "}
-              <span className="font-script text-[#ffb59c]">unmistakable</span>?
+              <span className="font-script text-[#ffb59c]">iconic</span>?
             </>
           }
           label={"Let\u2019s talk audio"}

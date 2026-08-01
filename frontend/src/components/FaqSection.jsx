@@ -6,7 +6,7 @@ const faqs = [
   {
     q: "What does Koodh Media Group do?",
     intro:
-      "We create audio branding for radio \u2014 sweepers, jingles, radio beds and imaging \u2014 and we shoot event and concert photography. In short: we make your station sound unmistakable and your event look unforgettable.",
+      "We create audio branding for radio \u2014 sweepers, jingles, radio beds and imaging \u2014 and we shoot event and concert photography. In short: we make your station sound iconic and your event look unforgettable.",
   },
   {
     q: "What kind of audio do you produce?",

@@ -6,7 +6,14 @@ import Footer from "../components/Footer";
 import CookieBanner from "../components/CookieBanner";
 import { fetchWorkArticle } from "../api";
 import Reveal from "../components/Reveal";
+import AudioPlayer from "../components/AudioPlayer";
 import usePageMeta from "../lib/seo";
+
+const NEWS_HOST = "https://clr.koodh.com";
+const AUDIO_EXT = /\.(mp3|wav|m4a|aac|ogg|oga|flac)(\?.*)?$/i;
+
+const absolutize = (src) =>
+  src && src.startsWith("/") ? `${NEWS_HOST}${src}` : src;
 
 // Remove the duplicate image-credit paragraph(s) from the article body.
 // The small credit is already shown under the photo via image_caption_html.
@@ -16,6 +23,48 @@ const stripImageCredit = (html) =>
     ""
   );
 
+// Pull any uploaded audio out of the article body so we can render our own
+// on-brand player instead of the browser's default <audio> controls.
+const extractAudio = (html) => {
+  if (typeof window === "undefined" || !html) return { html, tracks: [] };
+  const doc = new DOMParser().parseFromString(html, "text/html");
+  const tracks = [];
+  const push = (src, title) => {
+    const abs = absolutize(src);
+    if (abs && !tracks.some((t) => t.src === abs)) tracks.push({ src: abs, title });
+  };
+
+  doc.querySelectorAll("audio").forEach((el) => {
+    let src = el.getAttribute("src");
+    if (!src) {
+      const s = el.querySelector("source");
+      if (s) src = s.getAttribute("src");
+    }
+    let title = el.getAttribute("aria-label") || el.getAttribute("data-title") || "";
+    const fig = el.closest("figure");
+    if (!title && fig) {
+      const cap = fig.querySelector("figcaption");
+      if (cap) title = cap.textContent.trim();
+    }
+    if (src) push(src, title);
+    if (fig && fig.querySelectorAll("img,video,iframe").length === 0) fig.remove();
+    else el.remove();
+  });
+
+  // Also convert plain links to audio files into players.
+  doc.querySelectorAll("a[href]").forEach((a) => {
+    const href = a.getAttribute("href");
+    if (href && AUDIO_EXT.test(href)) {
+      push(href, a.textContent.trim());
+      const fig = a.closest("figure");
+      if (fig && fig.querySelectorAll("img,video,iframe").length === 0) fig.remove();
+      else a.remove();
+    }
+  });
+
+  return { html: doc.body.innerHTML, tracks };
+};
+
 export default function WorkDetail() {
   const { slug } = useParams();
   const [article, setArticle] = useState(null);
@@ -24,8 +73,8 @@ export default function WorkDetail() {
   usePageMeta({
     title: article ? article.title : "Work",
     description: article
-      ? `${article.title} — a project by Koodh.`
-      : "A project by Koodh — websites and AI solutions.",
+      ? `${article.title} — by Koodh Media Group.`
+      : "Selected work by Koodh Media Group — audio branding and event photography.",
     path: `/work/${slug}`,
   });
 
@@ -40,6 +89,14 @@ export default function WorkDetail() {
       alive = false;
     };
   }, [slug]);
+
+  const { html: bodyHtml, tracks } = extractAudio(
+    article && article.body ? stripImageCredit(article.body) : ""
+  );
+  if (article && article.audio_url) {
+    const abs = absolutize(article.audio_url);
+    if (!tracks.some((t) => t.src === abs)) tracks.unshift({ src: abs, title: article.title });
+  }
 
   return (
     <>
@@ -91,11 +148,19 @@ export default function WorkDetail() {
                 />
               )}
 
-              {article.body && (
+              {tracks.length > 0 && (
+                <div className="mt-10" data-testid="article-audio">
+                  {tracks.map((t, i) => (
+                    <AudioPlayer key={t.src + i} src={t.src} title={t.title} />
+                  ))}
+                </div>
+              )}
+
+              {bodyHtml && (
                 <Reveal
                   as="div"
                   className="article-body mt-10 text-lg text-neutral-700 leading-relaxed space-y-5"
-                  dangerouslySetInnerHTML={{ __html: stripImageCredit(article.body) }}
+                  dangerouslySetInnerHTML={{ __html: bodyHtml }}
                 />
               )}
             </article>

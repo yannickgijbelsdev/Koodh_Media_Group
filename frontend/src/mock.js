@@ -230,20 +230,20 @@ export const koodhServices = [
 
 export const koodhValues = [
   {
-    title: "Made to move",
-    text: "Every sweeper, jingle and photo is crafted to make people feel something the moment it hits.",
+    title: "Made to remember",
+    text: "Every moment we capture with a sound that fits, with an image that fits.",
   },
   {
-    title: "On-brand, always",
-    text: "We shape a sound and a look that fit your station or event like a glove.",
+    title: "We fit your brand",
+    text: "We create a jingle, promo or sweeper for your brand like we are part of it.",
   },
   {
-    title: "Live energy",
-    text: "We live for the stage. We capture and craft the raw energy of live moments.",
+    title: "Bringing the energy",
+    text: "We live for the perfect hit. A hit you never seen or felt before. An experience for your eyes and ears.",
   },
   {
-    title: "Fast & reliable",
-    text: "Deadlines in radio and events are real. We deliver on time, every time.",
+    title: "Always on time, there where it hits",
+    text: "We know how important it all is. You want the perfect timing for your company, you want to present the story right after it happens. With a photo that creates that moment, with audio branding that feels different.",
   },
 ];
 

@@ -182,11 +182,11 @@ export default function About() {
             </h2>
             <div className="mt-10 grid grid-cols-2 md:grid-cols-4 gap-x-8 gap-y-12 items-center">
               {koodhClients.map((c, i) => (
-                <Reveal as="div" key={c.name} delay={i * 80} className="flex items-center justify-center h-14">
+                <Reveal as="div" key={c.name} delay={i * 80} className="flex items-center justify-center h-16">
                   <img
                     src={c.logo}
                     alt={c.name}
-                    className="max-h-12 max-w-[150px] object-contain opacity-80 hover:opacity-100 transition-opacity"
+                    className="max-h-14 max-w-[190px] object-contain opacity-90 hover:opacity-100 transition-opacity"
                   />
                 </Reveal>
               ))}

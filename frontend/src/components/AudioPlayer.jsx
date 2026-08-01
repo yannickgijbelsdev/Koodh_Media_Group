@@ -14,6 +14,7 @@ export const AudioPlayer = ({ src, title }) => {
   const [playing, setPlaying] = useState(false);
   const [cur, setCur] = useState(0);
   const [dur, setDur] = useState(0);
+  const [failed, setFailed] = useState(false);
 
   const toggle = async () => {
     const a = ref.current;
@@ -81,7 +82,7 @@ export const AudioPlayer = ({ src, title }) => {
         </div>
 
         <div className="mt-1.5 flex justify-between text-xs tabular-nums text-white/60">
-          <span>{fmt(cur)}</span>
+          <span>{failed ? "Audio unavailable" : fmt(cur)}</span>
           <span>{fmt(dur)}</span>
         </div>
       </div>
@@ -91,6 +92,7 @@ export const AudioPlayer = ({ src, title }) => {
         src={src}
         preload="metadata"
         playsInline
+        onError={() => setFailed(true)}
         onPlay={() => setPlaying(true)}
         onPause={() => setPlaying(false)}
         onEnded={() => setPlaying(false)}

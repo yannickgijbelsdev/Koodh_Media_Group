@@ -114,7 +114,7 @@ export default function About() {
                 <p>
                   We start by listening. We get to know your station, your event
                   and the feeling you want your audience to have. From there we
-                  shape a sound and a look that are unmistakably yours.
+                  shape a sound and a look that are distinctly yours.
                 </p>
                 <p>
                   Whether it&rsquo;s a full imaging pack, a set of jingles or a

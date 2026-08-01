@@ -6,43 +6,57 @@ const faqs = [
   {
     q: "What does Koodh Media Group do?",
     intro:
-      "We create audio branding for radio \u2014 sweepers, jingles, radio beds and imaging \u2014 and we shoot event and concert photography. In short: we make your station sound iconic and your event look unforgettable.",
+      "Two things, done with the same passion: audio branding and photography. We give radio stations and brands a signature sound, and we capture live events and people in striking images \u2014 across Belgium and the Netherlands.",
   },
   {
-    q: "What kind of audio do you produce?",
-    intro: "Our audio work includes:",
+    q: "What kind of audio branding do you make?",
+    intro: "Our audio branding includes:",
     list: [
-      "Sweepers & station IDs",
-      "Promos & trailers",
       "Jingles",
-      "Radio beds & music beds",
-      "Voice-over direction and mixing",
+      "Promos",
+      "Sweepers",
+      "Show elements",
     ],
+    outro:
+      "For audio branding we like to sit down together a few times throughout the process. That way we really get to understand your company \u2014 what you do and what you\u2019re looking for \u2014 so the sound truly fits your brand.",
   },
   {
     q: "What kind of photography do you offer?",
-    intro:
-      "Live event, festival and concert photography. We capture the artists on stage and the energy of the crowd, and deliver edited images fast so you can share them while the moment is still hot. Recent work includes Genk On Stage and Zomernoten.",
+    intro: "We shoot:",
+    list: [
+      "Live events",
+      "Festivals",
+      "Concerts",
+      "Company",
+      "Portfolio",
+    ],
+    outro:
+      "We capture the energy of the moment and deliver edited images fast, so you can share them while the buzz is still fresh.",
   },
   {
-    q: "Where are you based and where do you work?",
+    q: "How far do you travel for a shoot?",
     intro:
-      "We\u2019re based in Budel-Schoot (Noord-Brabant, NL) and Pelt (Limburg, BE) and work across Limburg, Brabant and the whole of the Netherlands and Belgium. For events we travel to wherever the stage is.",
+      "Koodh Media Group is based in Budel-Schoot, but we drive all across Belgium and the Netherlands. Wherever it happens, we come to you \u2014 there is no fixed radius.",
   },
   {
-    q: "How fast do you deliver?",
+    q: "Do you have your own photo studio?",
     intro:
-      "Audio productions are delivered on agreed deadlines \u2014 radio moves fast and so do we. For event photography we deliver edited highlights quickly, usually within a day, so you can post while the buzz is still fresh.",
+      "No, we don\u2019t have our own photo studio, so having photos taken at our place isn\u2019t an option. We shoot on location \u2014 at your event, your venue or a spot that fits the story.",
+  },
+  {
+    q: "What is included in the cost?",
+    intro:
+      "For a shoot, the price covers the drive to the location and back, the gear we bring, the shoot itself and all the editing work afterwards \u2014 everything you need to end up with a finished result.",
   },
   {
     q: "How much does it cost?",
     intro:
-      "It depends on the scope \u2014 a single sweeper is very different from a full imaging pack or a weekend of festival photography. We always send a clear, no-obligation quote up front so you know exactly what to expect, with no surprises.",
+      "It depends on the scope and, for photography, on where the location is (the travel to and from it is part of the price). Because every job is different, it\u2019s best to request a quote \u2014 pop the details in an e-mail first and we\u2019ll send you a clear, no-obligation quote.",
   },
   {
     q: "How do we get started?",
     intro:
-      "Easy \u2014 send us an e-mail at yannick.gijbels@koodhmediagroup.com with your station, event or idea. We\u2019ll get back to you with honest advice and a tailored quote.",
+      "Easy \u2014 send us an e-mail at yannick.gijbels@koodhmediagroup.com with the details of your event, idea or brand. The more you share up front, the faster we can come back with honest advice and a tailored quote.",
   },
 ];
 

@@ -249,9 +249,9 @@ export const koodhValues = [
 
 export const koodhStats = [
   { value: "150+", label: "Jingles & sweepers produced" },
-  { value: "50+", label: "Events & festivals shot" },
+  { value: "3000+", label: "Event & festival shots" },
   { value: "2", label: "Countries (NL & BE)" },
-  { value: "10+", label: "Years behind the mic & lens" },
+  { value: "15+", label: "Years behind audio branding & photography" },
 ];
 
 // White logos from koodh.com (shown on a dark strip)

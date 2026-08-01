@@ -199,15 +199,14 @@ export default function About() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <Reveal>
               <h2 className="font-extrabold uppercase-tight text-black text-3xl md:text-5xl leading-[1.05]">
-                Meet the{" "}
+                Meet the real{" "}
                 <span className="font-script" style={{ color: "#f0603f" }}>
-                  maker
+                  Kootah&rsquo;s
                 </span>
               </h2>
               <p className="mt-6 text-lg text-neutral-600 leading-relaxed max-w-xl">
-                Behind Koodh Media Group is Yannick &mdash; the person behind the
-                mic and the lens. Get to know who you&rsquo;ll actually be working
-                with.
+                Behind Koodh Media Group is a small team that has the passion for
+                audio &amp; photography.
               </p>
               <Link
                 to="/meet-us"

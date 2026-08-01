@@ -13,7 +13,7 @@ export default function Work() {
   usePageMeta({
     title: "Work",
     description:
-      "Selected work by Koodh: websites, web apps and AI solutions built for ambitious businesses across the Netherlands and Belgium.",
+      "Selected work by Koodh Media Group: audio branding and event photography for radio stations, festivals and live events across the Netherlands and Belgium.",
     path: "/work",
   });
   const [items, setItems] = useState([]);
@@ -44,8 +44,8 @@ export default function Work() {
               </span>
             </>
           }
-          subtitle="Real projects we designed and built for ambitious people and businesses across the Netherlands and Belgium."
-          chips={["Websites", "Web apps", "AI", "Branding"]}
+          subtitle="Real audio branding and photography we crafted for radio stations, festivals and live events across the Netherlands and Belgium."
+          chips={["Audio Branding", "Photography"]}
         />
 
         <section className="max-w-[1600px] mx-auto px-6 md:px-10 pb-28">

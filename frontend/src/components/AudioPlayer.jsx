@@ -15,11 +15,23 @@ export const AudioPlayer = ({ src, title }) => {
   const [cur, setCur] = useState(0);
   const [dur, setDur] = useState(0);
 
-  const toggle = () => {
+  const toggle = async () => {
     const a = ref.current;
     if (!a) return;
-    if (a.paused) a.play();
-    else a.pause();
+    if (a.paused) {
+      try {
+        await a.play();
+      } catch (e) {
+        try {
+          a.load();
+          await a.play();
+        } catch (_) {
+          /* ignore */
+        }
+      }
+    } else {
+      a.pause();
+    }
   };
 
   const seek = (e) => {
@@ -78,6 +90,7 @@ export const AudioPlayer = ({ src, title }) => {
         ref={ref}
         src={src}
         preload="metadata"
+        playsInline
         onPlay={() => setPlaying(true)}
         onPause={() => setPlaying(false)}
         onEnded={() => setPlaying(false)}

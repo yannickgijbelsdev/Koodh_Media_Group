@@ -42,7 +42,7 @@ export default function Footer() {
         {/* Legal links */}
         <div className="mt-10 pt-6 border-t border-[#241063]/10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
           <p className="text-[13px] text-[#241063]/50">
-            &copy; {new Date().getFullYear()} Koodh Media Group. All rights reserved.
+            &copy; {new Date().getFullYear()} Koodh Media Group. All rights reserved. &middot; KVK 42066318
           </p>
           <div className="flex flex-wrap items-center gap-6 text-[13px] font-medium text-[#241063]/80">
             <Link to="/terms" className="hover:text-[#241063] link-underline">

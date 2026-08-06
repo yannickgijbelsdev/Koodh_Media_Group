@@ -31,10 +31,10 @@ export default function Footer() {
         {/* Bottom row */}
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
           <img src={logo} alt="Koodh Media Group" className="h-8 md:h-10 w-auto" />
-          <p className="font-extrabold uppercase-tight text-2xl md:text-4xl lg:text-[2.6rem] leading-none">
-            Creating new{" "}
+          <p className="font-extrabold lowercase tracking-tight text-2xl md:text-4xl lg:text-[2.6rem] leading-none">
+            create new{" "}
             <span className="font-script lowercase font-semibold" style={{ color: NAVY }}>
-              experiences.
+              experiences
             </span>
           </p>
         </div>
